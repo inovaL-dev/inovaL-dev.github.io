@@ -3,7 +3,7 @@
 :root { --fundo: #0b1518; --mesa: #15252c; --fio: #2c444e; --giz: #eef4f2; --medio: #a6babc; --marfim: #f6f0e4; --ambar: #f2b544; --verde: #5ad1b3; --lilas: #a99bff; --coral: #ff9466; --lado: clamp(1.25rem, 5vw, 5rem); }
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; background: var(--fundo); }
-body { overflow-x: hidden; background: radial-gradient(60rem 34rem at 78% -8rem, rgb(242 181 68 / .1), transparent 65%), radial-gradient(50rem 30rem at 8% 6rem, rgb(90 209 179 / .08), transparent 65%), var(--fundo); background-repeat: no-repeat; color: var(--giz); font: 400 1.0625rem/1.55 "Instrument Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+body { overflow-x: clip; background: radial-gradient(60rem 34rem at 78% -8rem, rgb(242 181 68 / .1), transparent 65%), radial-gradient(50rem 30rem at 8% 6rem, rgb(90 209 179 / .08), transparent 65%), var(--fundo); background-repeat: no-repeat; color: var(--giz); font: 400 1.0625rem/1.55 "Instrument Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--ambar); outline-offset: 3px; border-radius: 3px; }
@@ -34,11 +34,16 @@ section h2 { font-size: clamp(1.75rem, 3.6vw, 2.75rem); line-height: 1.12; font-
 .passos ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2.5rem; padding: 0; list-style: none; counter-reset: p; }
 .passos li { counter-increment: p; display: grid; gap: .375rem; padding-top: 1.125rem; border-top: 2px solid var(--fio); } .passos li::before { content: counter(p); color: var(--ambar); font: 400 2.25rem/1 Anton, sans-serif; } .passos b { font-size: 1.1875rem; } .passos span { color: var(--medio); }
 
-.recursos { display: grid; gap: clamp(4rem, 9vw, 7.5rem); max-width: 80rem; margin: 0 auto; padding: clamp(4.5rem, 10vw, 8rem) var(--lado) 0; }
-.recursos article { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); align-items: center; gap: clamp(1.75rem, 5vw, 4.5rem); } .recursos article:nth-child(even) > div { order: 2; } .recursos p { margin-top: .875rem; color: var(--medio); font-size: 1.125rem; } .recursos img { border-radius: .75rem; box-shadow: 0 0 0 1px rgb(255 255 255 / .08), 0 30px 70px -30px #000; }
+.recursos { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); gap: clamp(2rem, 5vw, 4.5rem); max-width: 84rem; margin: 0 auto; padding: clamp(3rem, 7vw, 5rem) var(--lado) 0; }
+.capitulos article { display: flex; flex-direction: column; justify-content: center; min-height: 92vh; transition: opacity .3s; } .capitulos article > img { display: none; } .capitulos p { margin-top: .875rem; color: var(--medio); font-size: 1.125rem; }
+.anim .capitulos article:not(.ativo) { opacity: .22; }
+.palco { position: sticky; top: 0; display: flex; align-items: center; height: 100vh; padding-top: 3.5rem; }
+.monitor { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--mesa); border-radius: .875rem; box-shadow: 0 0 0 1px rgb(255 255 255 / .1), 0 40px 90px -30px #000; }
+.monitor img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; will-change: clip-path; }
+.corte { position: absolute; top: 0; bottom: 0; left: 0; width: 3px; background: var(--ambar); box-shadow: 0 0 26px 6px rgb(242 181 68 / .6); opacity: 0; will-change: transform; }
 
 .versoes { max-width: 52rem; margin: 0 auto; padding: clamp(4.5rem, 10vw, 8rem) var(--lado) 0; }
-.versoes ol { position: relative; margin-top: 2.25rem; padding: 0 0 0 1.75rem; list-style: none; border-left: 2px solid var(--fio); } .versoes li { position: relative; padding-bottom: 2.25rem; } .versoes li:last-child { padding-bottom: 0; } .versoes li::before { content: ""; position: absolute; left: calc(-1.75rem - 7px); top: .5rem; width: 12px; height: 12px; background: var(--fundo); border: 2px solid var(--medio); border-radius: 50%; } .versoes li:first-child::before { background: var(--ambar); border-color: var(--ambar); box-shadow: 0 0 14px rgb(242 181 68 / .7); }
+.versoes ol { position: relative; margin-top: 2.25rem; padding: 0 0 0 1.75rem; list-style: none; border-left: 2px solid var(--fio); } .versoes ol::before { content: ""; position: absolute; left: -2px; top: 0; width: 2px; height: 100%; background: var(--ambar); box-shadow: 0 0 10px rgb(242 181 68 / .7); transform: scaleY(var(--v, 1)); transform-origin: top; } .versoes li { position: relative; padding-bottom: 2.25rem; } .versoes li:last-child { padding-bottom: 0; } .versoes li::before { content: ""; position: absolute; left: calc(-1.75rem - 7px); top: .5rem; width: 12px; height: 12px; background: var(--fundo); border: 2px solid var(--medio); border-radius: 50%; } .versoes li::before { transition: background .25s, border-color .25s, box-shadow .25s, transform .35s cubic-bezier(.3, 1.6, .5, 1); } .versoes li.ligada::before { background: var(--ambar); border-color: var(--ambar); box-shadow: 0 0 14px rgb(242 181 68 / .7); transform: scale(1.25); } .anim .versoes li { transition: opacity .4s, transform .4s; } .anim .versoes li:not(.ligada) { opacity: .35; transform: translateX(.5rem); }
 .versoes h3 { font-size: 1.375rem; letter-spacing: -.02em; } .versoes small { margin-left: .5rem; color: var(--medio); font-size: .875rem; font-weight: 500; letter-spacing: 0; } .versoes p { margin-top: .375rem; color: var(--medio); }
 
 .baixar { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; max-width: 72rem; margin: clamp(4.5rem, 10vw, 8rem) auto 0; padding: clamp(2rem, 5vw, 4rem); background: linear-gradient(135deg, #1b333c, #122229); border: 1px solid var(--fio); border-radius: 1.25rem; }
@@ -48,9 +53,32 @@ section h2 { font-size: clamp(1.75rem, 3.6vw, 2.75rem); line-height: 1.12; font-
 
 .rodape { display: grid; gap: .25rem; padding: 3rem var(--lado); color: var(--medio); font-size: .875rem; text-align: center; }
 
+
+/* Linha do tempo no topo: mostra em que ponto da página você está */
+.topo { transition: padding .25s; } .topo.rolou { padding-block: .5rem; }
+.trilha { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: rgb(44 68 78 / .5); } .trilha i { position: absolute; inset: 0; background: var(--ambar); transform: scaleX(var(--p, 0)); transform-origin: left; } .trilha b { position: absolute; top: -4px; left: 0; width: 2px; height: 10px; background: var(--ambar); box-shadow: 0 0 12px 2px rgb(242 181 68 / .7); transform: translateX(calc(var(--p, 0) * (100vw - 2px))); } .trilha u { position: absolute; top: -2px; width: 1px; height: 6px; background: var(--medio); }
+
+/* Produto que se levanta ao rolar */
+.vitrine { perspective: 1600px; } .anim .vitrine img { transform-origin: 50% 0; will-change: transform; }
+
+/* Números */
+.numeros { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.5rem; max-width: 72rem; margin: clamp(4rem, 9vw, 7rem) auto 0; padding: 0 var(--lado); text-align: center; } .numeros p { display: grid; gap: .125rem; } .numeros b { color: var(--marfim); font: 400 clamp(3rem, 7vw, 5.25rem)/1 Anton, Impact, sans-serif; font-variant-numeric: tabular-nums; } .numeros span { color: var(--medio); font-size: .9375rem; }
+
+/* Passos acendem em sequência */
+.passos li { position: relative; } .passos li::after { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: var(--ambar); box-shadow: 0 0 10px rgb(242 181 68 / .6); transform: scaleX(var(--l, 1)); transform-origin: left; } .anim .passos li { opacity: calc(.3 + var(--l, 1) * .7); transform: translateY(calc((1 - var(--l, 1)) * 1.25rem)); }
+
+/* Entradas */
+.anim .sobe { opacity: 0; transform: translateY(1.75rem); transition: opacity .6s, transform .7s cubic-bezier(.2, .8, .2, 1); } .anim .sobe.visivel { opacity: 1; transform: none; }
+.anim .baixar { transform: scale(calc(.92 + var(--b, 1) * .08)); opacity: calc(.35 + var(--b, 1) * .65); will-change: transform; }
+.baixar { position: relative; overflow: hidden; isolation: isolate; } .baixar::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(26rem circle at var(--mx, 25%) var(--my, 30%), rgb(242 181 68 / .16), transparent 70%); }
+
+@media (max-width: 60rem) {
+  .recursos { grid-template-columns: minmax(0, 1fr); gap: 3.5rem; } .palco { display: none; }
+  .capitulos { display: grid; gap: 3.5rem; } .capitulos article { min-height: 0; } .capitulos article > img { display: block; margin-top: 1.25rem; border-radius: .75rem; box-shadow: 0 0 0 1px rgb(255 255 255 / .08), 0 24px 50px -24px #000; } .anim .capitulos article:not(.ativo) { opacity: 1; }
+}
 @media (max-width: 52rem) {
+  .numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); } .numeros p:last-child { grid-column: 1 / -1; }
   .passos ol { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-  .recursos article { grid-template-columns: minmax(0, 1fr); } .recursos article:nth-child(even) > div { order: 0; }
   .baixar { grid-template-columns: minmax(0, 1fr); }
   .botao { width: 100%; text-align: center; } .acoes { flex-direction: column; }
 }

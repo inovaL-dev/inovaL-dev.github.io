@@ -13,6 +13,7 @@
 <meta name="theme-color" content="#0b1518">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b1518'/%3E%3Cpath fill='%23f2b544' d='M6 4h12l-6 7z'/%3E%3Crect x='11' y='9' width='2' height='11' rx='1' fill='%23f2b544'/%3E%3C/svg%3E">
 <link rel="preload" href="anton.woff2" as="font" type="font/woff2" crossorigin>
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");</script>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -27,10 +28,12 @@
     <a href="#versoes">Versões</a>
     <a class="nav-baixar" href="#baixar">Baixar</a>
   </nav>
+  <div class="trilha" id="trilha" aria-hidden="true"><i id="trilha-feito"></i><b id="trilha-agulha"></b></div>
 </header>
 
 <main id="inicio">
   <section class="abre">
+    <div class="abre-txt" id="abre-txt">
     <h1 class="legenda" id="legenda" aria-label="Cortes prontos enquanto a live acontece.">
       <span>Cortes</span> <span>prontos</span> <span>enquanto</span> <span>a</span> <span>live</span> <span>acontece.</span>
     </h1>
@@ -38,6 +41,7 @@
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
       <span class="versao-linha">Versão <b>1.4.0</b>, para Windows 10 e 11</span>
+    </div>
     </div>
 
     <div class="mesa" aria-hidden="true">
@@ -47,12 +51,20 @@
     </div>
   </section>
 
-  <section class="vitrine" aria-label="Tela principal do programa">
+  <section class="vitrine" id="vitrine" aria-label="Tela principal do programa">
     <img src="cortes.webp" width="1440" height="900" alt="Biblioteca do Clipador com cortes verticais prontos para postar">
   </section>
 
-  <section class="passos" aria-labelledby="passos-t">
-    <h2 id="passos-t">Da live ao Short em três passos</h2>
+  <section class="numeros" id="numeros" aria-label="O que vem no programa">
+    <p><b data-n="16">16</b><span>transições</span></p>
+    <p><b data-n="16">16</b><span>efeitos de texto</span></p>
+    <p><b data-n="12">12</b><span>modelos de legenda</span></p>
+    <p><b data-n="86">86</b><span>efeitos sonoros</span></p>
+    <p><b data-n="44">44</b><span>fontes</span></p>
+  </section>
+
+  <section class="passos" id="passos" aria-labelledby="passos-t">
+    <h2 class="sobe" id="passos-t">Da live ao Short em três passos</h2>
     <ol>
       <li><b>Escolha o vídeo</b><span>Cole o link da live no Kick, Twitch, YouTube ou X, ou envie um arquivo do computador.</span></li>
       <li><b>O Clipador corta</b><span>Ele avalia a voz, o chat e a ação na tela, e fecha cada corte no fim do assunto.</span></li>
@@ -61,38 +73,49 @@
   </section>
 
   <section class="recursos" id="recursos" aria-label="Recursos">
-    <article>
-      <div><h2>Acompanhe a live em tempo real</h2><p>Veja a força de cada momento, o chat e os cortes saindo enquanto a transmissão continua.</p></div>
-      <img src="ao-vivo.webp" width="1440" height="900" loading="lazy" alt="Painel ao vivo com gráfico de momentos e chat">
-    </article>
-    <article>
-      <div><h2>Edite como em um programa profissional</h2><p>Timeline com várias faixas, 16 transições, atalhos de teclado e prévia no seu vídeo antes de aplicar.</p></div>
-      <img src="transicoes.webp" width="1440" height="900" loading="lazy" alt="Editor do Clipador com transições na timeline">
-    </article>
-    <article>
-      <div><h2>Legendas que chamam atenção</h2><p>Neon, fogo, ouro, glitch e outros efeitos em uma legenda ou em todas de uma vez.</p></div>
-      <img src="efeitos.webp" width="1440" height="900" loading="lazy" alt="Painel de efeitos para textos e legendas">
-    </article>
-    <article>
-      <div><h2>Deixe a semana inteira agendada</h2><p>Organize os Shorts por pastas e horários. Vídeos longos só saem depois da sua revisão.</p></div>
-      <img src="postagem.webp" width="1440" height="900" loading="lazy" alt="Agenda de postagem de Shorts">
-    </article>
+    <div class="capitulos" id="capitulos">
+      <article>
+        <h2>Acompanhe a live em tempo real</h2><p>Veja a força de cada momento, o chat e os cortes saindo enquanto a transmissão continua.</p>
+        <img src="ao-vivo.webp" width="1440" height="900" loading="lazy" alt="Painel ao vivo com gráfico de momentos e chat">
+      </article>
+      <article>
+        <h2>Edite como em um programa profissional</h2><p>Timeline com várias faixas, 16 transições, atalhos de teclado e prévia no seu vídeo antes de aplicar.</p>
+        <img src="transicoes.webp" width="1440" height="900" loading="lazy" alt="Editor do Clipador com transições na timeline">
+      </article>
+      <article>
+        <h2>Legendas que chamam atenção</h2><p>Neon, fogo, ouro, glitch e outros efeitos em uma legenda ou em todas de uma vez.</p>
+        <img src="efeitos.webp" width="1440" height="900" loading="lazy" alt="Painel de efeitos para textos e legendas">
+      </article>
+      <article>
+        <h2>Deixe a semana inteira agendada</h2><p>Organize os Shorts por pastas e horários. Vídeos longos só saem depois da sua revisão.</p>
+        <img src="postagem.webp" width="1440" height="900" loading="lazy" alt="Agenda de postagem de Shorts">
+      </article>
+    </div>
+    <div class="palco" aria-hidden="true">
+      <div class="monitor" id="monitor">
+        <img src="ao-vivo.webp" width="1440" height="900" loading="lazy" alt="">
+        <img src="transicoes.webp" width="1440" height="900" loading="lazy" alt="">
+        <img src="efeitos.webp" width="1440" height="900" loading="lazy" alt="">
+        <img src="postagem.webp" width="1440" height="900" loading="lazy" alt="">
+        <i class="corte" id="corte"></i>
+      </div>
+    </div>
   </section>
 
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
-    <h2 id="versoes-t">Versões</h2>
-    <ol>
+    <h2 class="sobe" id="versoes-t">Versões</h2>
+    <ol id="linha-versoes">
       <li><h3>1.4.0 <small>Atual, novembro de 2026</small></h3><p>Corte de vídeos enviados do computador, prévia antes de aplicar, painel de transições, efeitos em textos e legendas, e blocos que se movem arrastando na timeline.</p></li>
       <li><h3>1.3.0 <small>Novembro de 2026</small></h3><p>Visual renovado, vídeo que toca ao passar o mouse e detecção mais confiável das lives do YouTube.</p></li>
       <li><h3>1.2.0 <small>Novembro de 2026</small></h3><p>Vídeos longos com abertura forte, novas transições e fontes, cortes que respeitam o assunto e aprendizado com as suas edições.</p></li>
     </ol>
   </section>
 
-  <section class="baixar" id="baixar" aria-labelledby="baixar-t">
+  <section class="baixar" id="baixar" data-luz aria-labelledby="baixar-t">
     <div>
       <h2 id="baixar-t">Baixe o Clipador</h2>
-      <p>O download está liberado para quem recebeu o convite por e-mail. Entre na conta do GitHub convidada antes de baixar.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest">Baixar a versão 1.4.0</a>
+      <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
+      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão 1.4.0</a>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
