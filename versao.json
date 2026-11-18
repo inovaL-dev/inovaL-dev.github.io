@@ -1,0 +1,48 @@
+{
+  "versao": "1.5.0",
+  "data": "2026-11-18",
+  "notas": [
+    "O programa agora avisa quando sair uma versão nova.",
+    "Botão para procurar atualizações nos Ajustes."
+  ],
+  "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
+  "historico": [
+    {
+      "versao": "1.5.0",
+      "data": "2026-11-18",
+      "notas": [
+        "O programa agora avisa quando sair uma versão nova.",
+        "Botão para procurar atualizações nos Ajustes."
+      ]
+    },
+    {
+      "versao": "1.4.0",
+      "data": "2026-11-18",
+      "notas": [
+        "Corte de vídeos enviados do computador.",
+        "Prévia antes de aplicar transições e efeitos.",
+        "Painel de transições e efeitos em textos e legendas.",
+        "Blocos que se movem arrastando na timeline."
+      ]
+    },
+    {
+      "versao": "1.3.0",
+      "data": "2026-11-18",
+      "notas": [
+        "Visual renovado.",
+        "Vídeo que toca ao passar o mouse.",
+        "Detecção mais confiável das lives do YouTube."
+      ]
+    },
+    {
+      "versao": "1.2.0",
+      "data": "2026-11-18",
+      "notas": [
+        "Vídeos longos com abertura forte.",
+        "Novas transições e fontes.",
+        "Cortes que respeitam o assunto.",
+        "Aprendizado com as suas edições."
+      ]
+    }
+  ]
+}

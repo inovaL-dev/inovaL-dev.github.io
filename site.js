@@ -1,6 +1,18 @@
 "use strict";
 (() => {
   const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* A versão e o histórico vêm do mesmo arquivo que avisa os programas instalados. */
+  fetch("versao.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
+    if (!d?.versao) return;
+    document.querySelectorAll("[data-versao]").forEach((n) => { n.textContent = d.versao; });
+    const lista = document.querySelector("#linha-versoes"), mes = new Intl.DateTimeFormat("pt-BR", { month: "long", year: "numeric", timeZone: "UTC" });
+    if (!d.historico?.length) return;
+    lista.replaceChildren(...d.historico.slice(0, 6).map((v, n) => {
+      const li = document.createElement("li"), h = document.createElement("h3"), s = document.createElement("small"), p = document.createElement("p"), data = mes.format(new Date(`${v.data}T12:00:00Z`));
+      s.textContent = n ? data : `Atual, ${data}`; h.append(`${v.versao} `, s); p.textContent = v.notas.join(" "); if (calmo) li.className = "ligada"; li.append(h, p); return li;
+    }));
+    dispatchEvent(new Event("resize"));
+  }).catch(() => {});
   const palavras = [...document.querySelectorAll("#legenda span")], sinal = document.querySelector("#sinal"), agulha = document.querySelector("#agulha"), saida = document.querySelector("#saida");
   const CORES = ["linear-gradient(#e9546e,#ffbe5c)", "linear-gradient(#1e96aa,#96f0d2)", "linear-gradient(#b43caa,#ff9678)", "linear-gradient(#5a5ae6,#faa0dc)", "linear-gradient(#32be78,#dcfa96)"];
   let barras = [], picos = [];
@@ -42,10 +54,11 @@
   const $ = (q) => document.querySelector(q), $$ = (q) => [...document.querySelectorAll(q)];
   const lim = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v)), suave = (t) => t * t * (3 - 2 * t);
   const topo = $(".topo"), trilha = $("#trilha"), texto = $("#abre-txt"), vitrine = $("#vitrine img"), passos = $$(".passos li"), capitulos = $$(".capitulos article"), telas = $$("#monitor img"), corte = $("#corte"), monitor = $("#monitor");
-  const linha = $("#linha-versoes"), versoes = $$("#linha-versoes li"), baixar = $("#baixar");
+  const linha = $("#linha-versoes"), baixar = $("#baixar"); let versoes = $$("#linha-versoes li");
   const pos = (n) => { let y = 0; for (; n; n = n.offsetParent) y += n.offsetTop; return y; };
   let m = {};
   function medir() {
+    versoes = $$("#linha-versoes li");
     m = { alt: innerHeight, max: Math.max(1, document.documentElement.scrollHeight - innerHeight), vitrine: pos(vitrine), passos: pos($("#passos ol")), cap: capitulos.map(pos), capAlt: capitulos[0].offsetHeight, linha: pos(linha), linhaAlt: linha.offsetHeight, versoes: versoes.map(pos), baixar: pos(baixar) };
     trilha.querySelectorAll("u").forEach((u) => u.remove());
     for (const id of ["recursos", "versoes", "baixar"]) { const u = document.createElement("u"); u.style.left = `${lim(pos(document.getElementById(id)) / m.max, 0, .995) * 100}%`; trilha.append(u); }
