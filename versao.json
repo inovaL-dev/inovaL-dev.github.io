@@ -1,13 +1,20 @@
 {
-  "versao": "1.8.2",
+  "versao": "1.8.3",
   "data": "2026-11-19",
   "notas": [
-    "Os modelos de título saem com a fonte certa no vídeo final.",
-    "Sons como no CapCut: ouvir, botão + e arrastar para a timeline.",
-    "Volume e entrada/saída suave direto no clipe de áudio, ouvindo a mudança enquanto toca."
+    "O aviso de sem conexão só aparece quando o programa para de responder de verdade.",
+    "Um erro em uma parte da tela não apaga as outras e fica anotado no registro."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.3",
+      "data": "2026-11-19",
+      "notas": [
+        "O aviso de sem conexão só aparece quando o programa para de responder de verdade.",
+        "Um erro em uma parte da tela não apaga as outras e fica anotado no registro."
+      ]
+    },
     {
       "versao": "1.8.2",
       "data": "2026-11-19",
@@ -113,5 +120,5 @@
       ]
     }
   ],
-  "site": "90986883f63c"
+  "site": "1019c532ee95"
 }
