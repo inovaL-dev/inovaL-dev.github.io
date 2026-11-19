@@ -1,12 +1,24 @@
 {
-  "versao": "1.8.3",
+  "versao": "1.8.4",
   "data": "2026-11-19",
   "notas": [
-    "O aviso de sem conexão só aparece quando o programa para de responder de verdade.",
-    "Um erro em uma parte da tela não apaga as outras e fica anotado no registro."
+    "Corrige o aviso de sem resposta que ficava preso com o programa aberto.",
+    "Arraste clipes, sons e mídias para o espaço vazio da timeline para criar outra faixa.",
+    "Separar áudio do vídeo, como no CapCut.",
+    "A transcrição deixa núcleos livres para a janela e as gravações."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.4",
+      "data": "2026-11-19",
+      "notas": [
+        "Corrige o aviso de sem resposta que ficava preso com o programa aberto.",
+        "Arraste clipes, sons e mídias para o espaço vazio da timeline para criar outra faixa.",
+        "Separar áudio do vídeo, como no CapCut.",
+        "A transcrição deixa núcleos livres para a janela e as gravações."
+      ]
+    },
     {
       "versao": "1.8.3",
       "data": "2026-11-19",
@@ -120,5 +132,5 @@
       ]
     }
   ],
-  "site": "1019c532ee95"
+  "site": "e7130b19aae0"
 }
