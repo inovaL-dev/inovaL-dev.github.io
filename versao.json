@@ -1,12 +1,26 @@
 {
-  "versao": "1.6.1",
+  "versao": "1.7.0",
   "data": "2026-11-18",
   "notas": [
-    "Vários modelos de edição aprendidos com os seus vídeos de exemplo.",
-    "Os cortes revezam entre todos os modelos e usam mais os que dão resultado."
+    "Engenharia reversa: envie um vídeo que deu certo e veja o gancho, o ritmo, as cores e os cortes dele.",
+    "Crie vídeos novos no estilo salvo, com suas cenas, seu texto e sua marca.",
+    "Reenquadrar vídeo no Editor: mostre as laterais que ficaram de fora no Short.",
+    "Pontos de zoom como no CapCut: arraste, edite ou apague cada ponto.",
+    "Corrige a tela preta ao ensinar com vários vídeos."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.7.0",
+      "data": "2026-11-18",
+      "notas": [
+        "Engenharia reversa: envie um vídeo que deu certo e veja o gancho, o ritmo, as cores e os cortes dele.",
+        "Crie vídeos novos no estilo salvo, com suas cenas, seu texto e sua marca.",
+        "Reenquadrar vídeo no Editor: mostre as laterais que ficaram de fora no Short.",
+        "Pontos de zoom como no CapCut: arraste, edite ou apague cada ponto.",
+        "Corrige a tela preta ao ensinar com vários vídeos."
+      ]
+    },
     {
       "versao": "1.6.1",
       "data": "2026-11-18",
@@ -70,5 +84,5 @@
       ]
     }
   ],
-  "site": "2bc62f473f06"
+  "site": "62c4c4591c93"
 }
