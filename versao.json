@@ -1,15 +1,32 @@
 {
-  "versao": "1.7.0",
-  "data": "2026-11-18",
+  "versao": "1.8.0",
+  "data": "2026-11-19",
   "notas": [
-    "Engenharia reversa: envie um vídeo que deu certo e veja o gancho, o ritmo, as cores e os cortes dele.",
-    "Crie vídeos novos no estilo salvo, com suas cenas, seu texto e sua marca.",
-    "Reenquadrar vídeo no Editor: mostre as laterais que ficaram de fora no Short.",
-    "Pontos de zoom como no CapCut: arraste, edite ou apague cada ponto.",
-    "Corrige a tela preta ao ensinar com vários vídeos."
+    "Shorts com cenas emendadas: quando o momento acaba rápido, emenda o próximo com transição, zoom e som.",
+    "22 músicas de fundo em 11 packs, compostas pelo Clipador e sem direitos autorais.",
+    "8 modelos de título novos com outras fontes, no Editor e no Estilo do vídeo.",
+    "Estilo do vídeo mostra uma amostra de cada legenda e título.",
+    "Vídeos longos com páginas, filtros, busca e status do envio.",
+    "Arraste as faixas do Editor pelo nome para mudar a ordem.",
+    "Reenquadrar no modo Livre ganhou bolinhas nas laterais.",
+    "Tutorial para conectar o YouTube e Ajustes reorganizados."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.0",
+      "data": "2026-11-19",
+      "notas": [
+        "Shorts com cenas emendadas: quando o momento acaba rápido, emenda o próximo com transição, zoom e som.",
+        "22 músicas de fundo em 11 packs, compostas pelo Clipador e sem direitos autorais.",
+        "8 modelos de título novos com outras fontes, no Editor e no Estilo do vídeo.",
+        "Estilo do vídeo mostra uma amostra de cada legenda e título.",
+        "Vídeos longos com páginas, filtros, busca e status do envio.",
+        "Arraste as faixas do Editor pelo nome para mudar a ordem.",
+        "Reenquadrar no modo Livre ganhou bolinhas nas laterais.",
+        "Tutorial para conectar o YouTube e Ajustes reorganizados."
+      ]
+    },
     {
       "versao": "1.7.0",
       "data": "2026-11-18",
@@ -84,5 +101,5 @@
       ]
     }
   ],
-  "site": "62c4c4591c93"
+  "site": "d60cdc076df5"
 }
