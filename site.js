@@ -2,7 +2,7 @@
 (() => {
   const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
   /* A versão e o histórico vêm do mesmo arquivo que avisa os programas instalados. */
-  fetch("versao.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
+  fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
     if (!d?.versao) return;
     document.querySelectorAll("[data-versao]").forEach((n) => { n.textContent = d.versao; });
     const lista = document.querySelector("#linha-versoes"), mes = new Intl.DateTimeFormat("pt-BR", { month: "long", year: "numeric", timeZone: "UTC" });

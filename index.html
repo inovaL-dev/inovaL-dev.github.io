@@ -13,8 +13,21 @@
 <meta name="theme-color" content="#0b1518">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b1518'/%3E%3Cpath fill='%23f2b544' d='M6 4h12l-6 7z'/%3E%3Crect x='11' y='9' width='2' height='11' rx='1' fill='%23f2b544'/%3E%3C/svg%3E">
 <link rel="preload" href="anton.woff2" as="font" type="font/woff2" crossorigin>
-<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");</script>
-<link rel="stylesheet" href="estilo.css">
+<script>
+/* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
+(() => {
+  const atual = "e3f8f5e18b01", u = new URL(location.href);
+  if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
+  if (atual === "dev") return;
+  fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
+    const destino = new URL(location.href);
+    if (!d.site || d.site === atual || new URL(document.URL).searchParams.get("v") === d.site || sessionStorage.getItem("site-recarregado") === d.site) return;
+    sessionStorage.setItem("site-recarregado", d.site); destino.searchParams.set("v", d.site); location.replace(destino);
+  }).catch(() => {});
+})();
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
+</script>
+<link rel="stylesheet" href="estilo.css?v=e3f8f5e18b01">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -40,7 +53,7 @@
     <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos e entrega Shorts e vídeos longos editados.</p>
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
-      <span class="versao-linha">Versão <b data-versao>1.4.0</b>, para Windows 10 e 11</span>
+      <span class="versao-linha">Versão <b data-versao>1.5.1</b>, para Windows 10 e 11</span>
     </div>
     </div>
 
@@ -115,7 +128,7 @@
     <div>
       <h2 id="baixar-t">Baixe o Clipador</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.4.0</span></a>
+      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.5.1</span></a>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
@@ -131,6 +144,6 @@
   <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js"></script>
+<script src="site.js?v=e3f8f5e18b01"></script>
 </body>
 </html>
