@@ -1,18 +1,30 @@
 {
-  "versao": "1.8.0",
+  "versao": "1.8.2",
   "data": "2026-11-19",
   "notas": [
-    "Shorts com cenas emendadas: quando o momento acaba rápido, emenda o próximo com transição, zoom e som.",
-    "22 músicas de fundo em 11 packs, compostas pelo Clipador e sem direitos autorais.",
-    "8 modelos de título novos com outras fontes, no Editor e no Estilo do vídeo.",
-    "Estilo do vídeo mostra uma amostra de cada legenda e título.",
-    "Vídeos longos com páginas, filtros, busca e status do envio.",
-    "Arraste as faixas do Editor pelo nome para mudar a ordem.",
-    "Reenquadrar no modo Livre ganhou bolinhas nas laterais.",
-    "Tutorial para conectar o YouTube e Ajustes reorganizados."
+    "Os modelos de título saem com a fonte certa no vídeo final.",
+    "Sons como no CapCut: ouvir, botão + e arrastar para a timeline.",
+    "Volume e entrada/saída suave direto no clipe de áudio, ouvindo a mudança enquanto toca."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.2",
+      "data": "2026-11-19",
+      "notas": [
+        "Os modelos de título saem com a fonte certa no vídeo final.",
+        "Sons como no CapCut: ouvir, botão + e arrastar para a timeline.",
+        "Volume e entrada/saída suave direto no clipe de áudio, ouvindo a mudança enquanto toca."
+      ]
+    },
+    {
+      "versao": "1.8.1",
+      "data": "2026-11-19",
+      "notas": [
+        "Barra de progresso ao enviar vídeos para o Aprendizado, com tempo que falta.",
+        "A tela não recarrega mais sozinha quando a janela fica atrás de outras ou minimizada."
+      ]
+    },
     {
       "versao": "1.8.0",
       "data": "2026-11-19",
@@ -101,5 +113,5 @@
       ]
     }
   ],
-  "site": "d60cdc076df5"
+  "site": "90986883f63c"
 }
