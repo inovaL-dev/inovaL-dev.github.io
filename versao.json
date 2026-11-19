@@ -1,13 +1,20 @@
 {
-  "versao": "1.6.0",
+  "versao": "1.6.1",
   "data": "2026-11-18",
   "notas": [
-    "Montagens que juntam os melhores momentos com transições rápidas e efeitos sonoros.",
-    "Zoom automático no que o streamer cita, como estrelas, mapa, vida e dinheiro.",
-    "Ensine o programa com vários vídeos de exemplo de uma vez."
+    "Vários modelos de edição aprendidos com os seus vídeos de exemplo.",
+    "Os cortes revezam entre todos os modelos e usam mais os que dão resultado."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.6.1",
+      "data": "2026-11-18",
+      "notas": [
+        "Vários modelos de edição aprendidos com os seus vídeos de exemplo.",
+        "Os cortes revezam entre todos os modelos e usam mais os que dão resultado."
+      ]
+    },
     {
       "versao": "1.6.0",
       "data": "2026-11-18",
@@ -63,5 +70,5 @@
       ]
     }
   ],
-  "site": "1f682101050b"
+  "site": "2bc62f473f06"
 }
