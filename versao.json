@@ -1,12 +1,26 @@
 {
-  "versao": "1.5.0",
+  "versao": "1.5.2",
   "data": "2026-11-18",
   "notas": [
-    "O programa agora avisa quando sair uma versão nova.",
-    "Botão para procurar atualizações nos Ajustes."
+    "Novidade"
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.5.2",
+      "data": "2026-11-18",
+      "notas": [
+        "Novidade"
+      ]
+    },
+    {
+      "versao": "1.5.1",
+      "data": "2026-11-18",
+      "notas": [
+        "Os números do menu só se movem quando o valor muda.",
+        "Interface mais leve, com menos animações rodando o tempo todo."
+      ]
+    },
     {
       "versao": "1.5.0",
       "data": "2026-11-18",
