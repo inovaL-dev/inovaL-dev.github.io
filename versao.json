@@ -1,13 +1,18 @@
 {
-  "versao": "1.8.5",
+  "versao": "1.8.6",
   "data": "2026-11-19",
   "notas": [
-    "O Aprendizado mede a câmera de ponta a ponta dos exemplos e divide a tela na mesma altura.",
-    "Câmera sempre centralizada no rosto, sem pegar o chat ao lado.",
-    "O zoom automático não aproxima mais a própria webcam (fim das duas câmeras)."
+    "Tela inicial nova: mostra um Short sendo montado e reconhece a plataforma do link enquanto você digita."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.6",
+      "data": "2026-11-19",
+      "notas": [
+        "Tela inicial nova: mostra um Short sendo montado e reconhece a plataforma do link enquanto você digita."
+      ]
+    },
     {
       "versao": "1.8.5",
       "data": "2026-11-19",
@@ -140,5 +145,5 @@
       ]
     }
   ],
-  "site": "a236860d33f8"
+  "site": "a4d449b5ac96"
 }
