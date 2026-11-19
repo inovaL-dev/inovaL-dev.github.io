@@ -1,12 +1,22 @@
 {
-  "versao": "1.5.1",
+  "versao": "1.6.0",
   "data": "2026-11-18",
   "notas": [
-    "Os números do menu só se movem quando o valor muda.",
-    "Interface mais leve, com menos animações rodando o tempo todo."
+    "Montagens que juntam os melhores momentos com transições rápidas e efeitos sonoros.",
+    "Zoom automático no que o streamer cita, como estrelas, mapa, vida e dinheiro.",
+    "Ensine o programa com vários vídeos de exemplo de uma vez."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.6.0",
+      "data": "2026-11-18",
+      "notas": [
+        "Montagens que juntam os melhores momentos com transições rápidas e efeitos sonoros.",
+        "Zoom automático no que o streamer cita, como estrelas, mapa, vida e dinheiro.",
+        "Ensine o programa com vários vídeos de exemplo de uma vez."
+      ]
+    },
     {
       "versao": "1.5.1",
       "data": "2026-11-18",
@@ -53,5 +63,5 @@
       ]
     }
   ],
-  "site": "e3f8f5e18b01"
+  "site": "1f682101050b"
 }
