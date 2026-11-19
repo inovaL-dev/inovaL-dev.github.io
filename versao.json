@@ -1,14 +1,22 @@
 {
-  "versao": "1.8.4",
+  "versao": "1.8.5",
   "data": "2026-11-19",
   "notas": [
-    "Corrige o aviso de sem resposta que ficava preso com o programa aberto.",
-    "Arraste clipes, sons e mídias para o espaço vazio da timeline para criar outra faixa.",
-    "Separar áudio do vídeo, como no CapCut.",
-    "A transcrição deixa núcleos livres para a janela e as gravações."
+    "O Aprendizado mede a câmera de ponta a ponta dos exemplos e divide a tela na mesma altura.",
+    "Câmera sempre centralizada no rosto, sem pegar o chat ao lado.",
+    "O zoom automático não aproxima mais a própria webcam (fim das duas câmeras)."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.8.5",
+      "data": "2026-11-19",
+      "notas": [
+        "O Aprendizado mede a câmera de ponta a ponta dos exemplos e divide a tela na mesma altura.",
+        "Câmera sempre centralizada no rosto, sem pegar o chat ao lado.",
+        "O zoom automático não aproxima mais a própria webcam (fim das duas câmeras)."
+      ]
+    },
     {
       "versao": "1.8.4",
       "data": "2026-11-19",
@@ -132,5 +140,5 @@
       ]
     }
   ],
-  "site": "e7130b19aae0"
+  "site": "a236860d33f8"
 }
