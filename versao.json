@@ -1,16 +1,24 @@
 {
-  "versao": "1.13.0",
+  "versao": "1.14.0",
   "data": "2026-11-21",
   "notas": [
-    "Assistir a edição: clique num corte que ainda está sendo feito e veja o Clipador trabalhar. A fala aparece conforme é ouvida, o começo e o fim da história são marcados, o rosto é encontrado na webcam e os zooms, as trocas de câmera, o título, as legendas e os sons entram na timeline um a um, enquanto o vídeo é montado quadro a quadro.",
-    "Quando o corte fica pronto, o vídeo final toca com a timeline andando junto. Em qualquer corte pronto, o botão Ver a edição mostra de novo como ele foi feito.",
-    "Postagem por potencial: a agenda só recebe cortes com potencial de 85% ou mais. Dá para escolher outro mínimo (de 50% a 95%) ou postar todos, em Postagem > Horários.",
-    "Os cortes de maior potencial são postados primeiro. A ordem que você muda à mão continua valendo.",
-    "Um corte abaixo do mínimo pode ser liberado um a um, com o botão Postar mesmo assim, na janela do corte.",
-    "Correção: a duração dos trechos gravados das lives às vezes era lida errada, o que podia atrapalhar a escolha do começo e do fim do corte."
+    "Várias lives de uma vez: cole vários links juntos no campo do Ao vivo, separados por espaço, vírgula ou linha. Cada live é gravada, tem o chat lido e é cortada ao mesmo tempo que as outras.",
+    "Fila de edição inteligente: com várias lives, os momentos de reação mais forte são editados primeiro. O que você pede na hora (refazer, encurtar) passa na frente de tudo.",
+    "Os cortes esperando mostram a posição na fila de edição.",
+    "O Ao vivo mostra quantas lives o seu computador aguenta bem ao mesmo tempo e avisa quando passar disso."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.14.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Várias lives de uma vez: cole vários links juntos no campo do Ao vivo, separados por espaço, vírgula ou linha. Cada live é gravada, tem o chat lido e é cortada ao mesmo tempo que as outras.",
+        "Fila de edição inteligente: com várias lives, os momentos de reação mais forte são editados primeiro. O que você pede na hora (refazer, encurtar) passa na frente de tudo.",
+        "Os cortes esperando mostram a posição na fila de edição.",
+        "O Ao vivo mostra quantas lives o seu computador aguenta bem ao mesmo tempo e avisa quando passar disso."
+      ]
+    },
     {
       "versao": "1.13.0",
       "data": "2026-11-21",
@@ -269,5 +277,5 @@
       ]
     }
   ],
-  "site": "e61ebd21faba"
+  "site": "b21d8a179a86"
 }
