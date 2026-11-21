@@ -1,15 +1,28 @@
 {
-  "versao": "1.11.1",
+  "versao": "1.12.0",
   "data": "2026-11-21",
   "notas": [
-    "Estilo do vídeo ganhou os 20 modelos de legenda do editor, cada um com a sua fonte e as suas cores: Viral amarelo, Caixa verde, Uma palavra, Desenho, Quadrinho, Gamer, Neon rosa, Cinema, Terror, Faixa preta, Pincel, Arcade, Karaokê pop, Karaokê caixa, Alternado, Frase em bloco, Sublinhado, Volumoso, Retrô 3D e Sem pontuação.",
-    "Escolha a fonte da legenda e a do título entre as 44 fontes do Clipador, com amostra na hora. A troca de fonte mantém o tamanho da letra.",
-    "A barra de progresso no topo dos vídeos sai por padrão. Quem quiser pode ligar de novo em Estilo do vídeo.",
-    "Os novos modelos também valem para escolher a legenda de um corte só e aparecem iguais quando o corte é aberto no editor.",
-    "O script de publicação no GitHub funciona com pastas que estavam em outro ramo e refaz a marca da versão quando o instalador ainda não foi criado."
+    "Legendas mais certeiras em português: nova precisão Máxima com o modelo large-v3-turbo, que erra bem menos que o anterior. Quem usava a Equilibrada passa para ela sozinho se o computador tiver 8 GB de memória ou mais.",
+    "Nomes e palavras das suas lives (em Ajustes): nomes, jogos e gírias que a legenda deve acertar. O nome do canal e o título da live entram sozinhos.",
+    "Correções aprendidas: quando você corrige uma palavra na legenda de um corte, o Clipador troca aquele erro sozinho nos próximos. Dá para ver e esquecer cada correção em Aprendizado.",
+    "A legenda tira as frases que o reconhecimento de fala inventa em silêncio ou música, como “Legendas pela comunidade Amara.org”, e as repetições em loop.",
+    "Busca mais cuidadosa na fala e detector de voz mais sensível, para não perder fala baixa por cima do som do jogo.",
+    "Ao corrigir a legenda à mão, as palavras que não mudaram mantêm o tempo certo da fala."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.12.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Legendas mais certeiras em português: nova precisão Máxima com o modelo large-v3-turbo, que erra bem menos que o anterior. Quem usava a Equilibrada passa para ela sozinho se o computador tiver 8 GB de memória ou mais.",
+        "Nomes e palavras das suas lives (em Ajustes): nomes, jogos e gírias que a legenda deve acertar. O nome do canal e o título da live entram sozinhos.",
+        "Correções aprendidas: quando você corrige uma palavra na legenda de um corte, o Clipador troca aquele erro sozinho nos próximos. Dá para ver e esquecer cada correção em Aprendizado.",
+        "A legenda tira as frases que o reconhecimento de fala inventa em silêncio ou música, como “Legendas pela comunidade Amara.org”, e as repetições em loop.",
+        "Busca mais cuidadosa na fala e detector de voz mais sensível, para não perder fala baixa por cima do som do jogo.",
+        "Ao corrigir a legenda à mão, as palavras que não mudaram mantêm o tempo certo da fala."
+      ]
+    },
     {
       "versao": "1.11.1",
       "data": "2026-11-21",
@@ -244,5 +257,5 @@
       ]
     }
   ],
-  "site": "2038e4574852"
+  "site": "e3f797bf3be5"
 }
