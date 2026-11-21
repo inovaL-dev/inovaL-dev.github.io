@@ -1,16 +1,28 @@
 {
-  "versao": "1.12.0",
+  "versao": "1.13.0",
   "data": "2026-11-21",
   "notas": [
-    "Legendas mais certeiras em português: nova precisão Máxima com o modelo large-v3-turbo, que erra bem menos que o anterior. Quem usava a Equilibrada passa para ela sozinho se o computador tiver 8 GB de memória ou mais.",
-    "Nomes e palavras das suas lives (em Ajustes): nomes, jogos e gírias que a legenda deve acertar. O nome do canal e o título da live entram sozinhos.",
-    "Correções aprendidas: quando você corrige uma palavra na legenda de um corte, o Clipador troca aquele erro sozinho nos próximos. Dá para ver e esquecer cada correção em Aprendizado.",
-    "A legenda tira as frases que o reconhecimento de fala inventa em silêncio ou música, como “Legendas pela comunidade Amara.org”, e as repetições em loop.",
-    "Busca mais cuidadosa na fala e detector de voz mais sensível, para não perder fala baixa por cima do som do jogo.",
-    "Ao corrigir a legenda à mão, as palavras que não mudaram mantêm o tempo certo da fala."
+    "Assistir a edição: clique num corte que ainda está sendo feito e veja o Clipador trabalhar. A fala aparece conforme é ouvida, o começo e o fim da história são marcados, o rosto é encontrado na webcam e os zooms, as trocas de câmera, o título, as legendas e os sons entram na timeline um a um, enquanto o vídeo é montado quadro a quadro.",
+    "Quando o corte fica pronto, o vídeo final toca com a timeline andando junto. Em qualquer corte pronto, o botão Ver a edição mostra de novo como ele foi feito.",
+    "Postagem por potencial: a agenda só recebe cortes com potencial de 85% ou mais. Dá para escolher outro mínimo (de 50% a 95%) ou postar todos, em Postagem > Horários.",
+    "Os cortes de maior potencial são postados primeiro. A ordem que você muda à mão continua valendo.",
+    "Um corte abaixo do mínimo pode ser liberado um a um, com o botão Postar mesmo assim, na janela do corte.",
+    "Correção: a duração dos trechos gravados das lives às vezes era lida errada, o que podia atrapalhar a escolha do começo e do fim do corte."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.13.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Assistir a edição: clique num corte que ainda está sendo feito e veja o Clipador trabalhar. A fala aparece conforme é ouvida, o começo e o fim da história são marcados, o rosto é encontrado na webcam e os zooms, as trocas de câmera, o título, as legendas e os sons entram na timeline um a um, enquanto o vídeo é montado quadro a quadro.",
+        "Quando o corte fica pronto, o vídeo final toca com a timeline andando junto. Em qualquer corte pronto, o botão Ver a edição mostra de novo como ele foi feito.",
+        "Postagem por potencial: a agenda só recebe cortes com potencial de 85% ou mais. Dá para escolher outro mínimo (de 50% a 95%) ou postar todos, em Postagem > Horários.",
+        "Os cortes de maior potencial são postados primeiro. A ordem que você muda à mão continua valendo.",
+        "Um corte abaixo do mínimo pode ser liberado um a um, com o botão Postar mesmo assim, na janela do corte.",
+        "Correção: a duração dos trechos gravados das lives às vezes era lida errada, o que podia atrapalhar a escolha do começo e do fim do corte."
+      ]
+    },
     {
       "versao": "1.12.0",
       "data": "2026-11-21",
@@ -257,5 +269,5 @@
       ]
     }
   ],
-  "site": "e3f797bf3be5"
+  "site": "e61ebd21faba"
 }
