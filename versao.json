@@ -1,12 +1,83 @@
 {
-  "versao": "1.8.8",
-  "data": "2026-11-19",
+  "versao": "1.11.0",
+  "data": "2026-11-21",
   "notas": [
-    "Se o programa ou o computador desligar, cortes, gravações e vídeos longos continuam de onde pararam.",
-    "Shorts com cenas emendadas também a partir de cortes prontos, vídeos enviados e lives gravadas."
+    "Ideias em teste: o estilo React com câmera dinâmica deixa de ser o padrão de todos os cortes e vira uma ideia testada lado a lado com o seu estilo. Cada corte novo recebe uma delas.",
+    "O Clipador aprende qual funciona melhor: o que você posta conta a favor; o que você apaga sem postar ou troca no corte conta contra; com o YouTube conectado, as visualizações contam ainda mais. A melhor aparece mais vezes, e as outras continuam aparecendo de vez em quando para perceber se o gosto mudou.",
+    "Em Aprendizado, a nova parte Ideias em teste mostra quantas vezes cada ideia foi usada, postada, apagada e trocada, e quanto ela vai aparecer nos próximos cortes. Dá para ligar ou desligar cada uma.",
+    "Os vídeos de referência agora ensinam também a câmera dinâmica e a legenda curta na divisão da tela: se o exemplo troca entre a tela dividida, o rosto e o jogo, o modelo aprendido faz o mesmo.",
+    "Na janela do corte, o campo Câmera deste corte deixa escolher entre dinâmica e fixa e refazer o vídeo.",
+    "Quem instalou a 1.10.0 volta a ter a legenda de antes como padrão; a legenda React segue disponível em Estilo do vídeo."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.11.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Ideias em teste: o estilo React com câmera dinâmica deixa de ser o padrão de todos os cortes e vira uma ideia testada lado a lado com o seu estilo. Cada corte novo recebe uma delas.",
+        "O Clipador aprende qual funciona melhor: o que você posta conta a favor; o que você apaga sem postar ou troca no corte conta contra; com o YouTube conectado, as visualizações contam ainda mais. A melhor aparece mais vezes, e as outras continuam aparecendo de vez em quando para perceber se o gosto mudou.",
+        "Em Aprendizado, a nova parte Ideias em teste mostra quantas vezes cada ideia foi usada, postada, apagada e trocada, e quanto ela vai aparecer nos próximos cortes. Dá para ligar ou desligar cada uma.",
+        "Os vídeos de referência agora ensinam também a câmera dinâmica e a legenda curta na divisão da tela: se o exemplo troca entre a tela dividida, o rosto e o jogo, o modelo aprendido faz o mesmo.",
+        "Na janela do corte, o campo Câmera deste corte deixa escolher entre dinâmica e fixa e refazer o vídeo.",
+        "Quem instalou a 1.10.0 volta a ter a legenda de antes como padrão; a legenda React segue disponível em Estilo do vídeo."
+      ]
+    },
+    {
+      "versao": "1.10.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Câmera dinâmica nos Shorts com webcam e jogo: antes da reação o jogo ocupa a tela inteira para mostrar o que aconteceu, e na reação o rosto do streamer aparece de perto. Quando o streamer fica quieto, o jogo conta a história sozinho.",
+        "As trocas duram de 1 a 2,5 segundos, nunca ficam coladas e não passam de um terço do vídeo. Os primeiros segundos sempre mostram a tela dividida.",
+        "Nova legenda React: 1 a 3 palavras amarelas com contorno preto, logo abaixo da divisão da tela. Quando o rosto ou o jogo ocupam a tela, ela desce um pouco. Passa a ser a legenda padrão.",
+        "Seu @ nas redes: aparece pequeno no vídeo, trocando de canto a cada 7 segundos, e no final o vídeo escurece com o seu @ na tela por 2 segundos (sem passar de 59 s).",
+        "No editor, cada troca de câmera vira um elemento da faixa Câmera dinâmica, que dá para mover, encurtar ou apagar."
+      ]
+    },
+    {
+      "versao": "1.9.2",
+      "data": "2026-11-21",
+      "notas": [
+        "Potencial de viralizar: cada corte pronto mostra uma porcentagem na capa, de 1% a 99%, com verde para alto, amarelo para médio e vermelho para baixo.",
+        "Ao abrir o corte, o potencial mostra de onde veio a nota (reação da live, gancho dos 3 primeiros segundos, história completa, ritmo, emoção e duração) e dicas do que mudar no editor.",
+        "Com o YouTube conectado, a nota também considera o que já deu mais views no seu canal.",
+        "Na aba Cortes, a ordem “Maior potencial” mostra primeiro o que vale postar antes. Cortes antigos ganham a nota sem precisar refazer."
+      ]
+    },
+    {
+      "versao": "1.9.1",
+      "data": "2026-11-21",
+      "notas": [
+        "Cortes com contexto: o Clipador acha onde o assunto começa e onde termina, e o corte traz a preparação, o momento e o desfecho, sem começar no meio do raciocínio nem invadir o próximo assunto.",
+        "Quando a história é curta e completa, o corte fica com ela em vez de completar o tempo com outro assunto.",
+        "Os Shorts de cenas emendadas, que picavam os momentos em pedaços de poucos segundos, vêm desligados. Ligados, cada cena entra com começo, meio e fim.",
+        "As montagens usam 3 cenas por padrão, cada uma com o seu contexto.",
+        "Segue quem está falando: com duas ou mais pessoas na tela (podcast, conversa, IRL), o vertical pula para quem tem a palavra, pelo movimento da boca e pela voz. No editor: Seguir quem fala.",
+        "Posts de frase: as frases mais fortes das lives viram posts com o rosto de quem falou, para o feed (4:5) e os stories (9:16), com negrito nas palavras-chave, fonte, preto e branco, assinatura e legenda pronta. Baixe um PNG ou várias de uma vez num ZIP.",
+        "Escreva a sua própria frase (uma citação, um versículo) e use os rostos dos cortes."
+      ]
+    },
+    {
+      "versao": "1.9.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Editor com layout novo, inspirado no Drift: fonte Inter, painéis mais compactos e timeline com miniaturas do vídeo nos clipes, mantendo as cores do Clipador.",
+        "12 transições novas: cortinas, diagonal, íris, relógio, persianas, pixelar, tinta, zoom cruzado e clarão de luz.",
+        "11 efeitos de vídeo novos: grão de filme, VHS, Super 8, estroboscópio, luz vazada, pixelar, duas cores, contorno neon, caleidoscópio, meio-tom e desfoque de movimento.",
+        "18 packs de texto prontos (Impacto, Neon, Ouro, Cromado, Retrô 3D, Glitch, Quadrinho e outros) e 9 packs de legenda, incluindo Hormozi e Karaokê.",
+        "Textos com relevo 3D, sublinhado, destaque na primeira, na última ou em palavras alternadas, palavra destacada maior e opção de tirar a pontuação.",
+        "8 animações novas de entrada e saída: desfocar, carimbo, cair quicando, girar, piscar, glitch, esticar e encolher.",
+        "24 efeitos de áudio: limpar voz, reduzir ruído, voz grossa, esquilo, robô, telefone, rádio, megafone, eco, caverna e mais, com botão para ouvir antes.",
+        "A música abaixa sozinha quando alguém fala e volta nas pausas.",
+        "Marque as batidas da música na timeline: com o ímã ligado, os cortes grudam no ritmo.",
+        "Cortar pausas e vícios de linguagem (é, ã, hum) em um clique, usando o tempo de cada palavra.",
+        "Traduzir as legendas para 13 idiomas, numa faixa nova.",
+        "Seguir o rosto e tela dividida para duas pessoas, cada uma numa metade.",
+        "Congelar quadro (Shift + F), com matiz, nitidez, vinheta e LUTs .cube na correção de cor.",
+        "Levar o projeto para o Premiere Pro ou o DaVinci Resolve em XML, com as legendas em .srt.",
+        "Dois modelos novos para os cortes automáticos: Karaokê e Hormozi."
+      ]
+    },
     {
       "versao": "1.8.8",
       "data": "2026-11-19",
@@ -163,5 +234,5 @@
       ]
     }
   ],
-  "site": "c3aebd9f7e42"
+  "site": "ee7938a351fc"
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clipador: cortes prontos enquanto a live acontece</title>
-<meta name="description" content="Programa para Windows que acompanha lives, encontra os melhores momentos e entrega Shorts e vídeos longos editados.">
+<meta name="description" content="Programa para Windows que acompanha lives, encontra os melhores momentos, diz quais cortes têm mais potencial de viralizar e entrega Shorts e vídeos longos editados.">
 <meta property="og:title" content="Clipador">
 <meta property="og:description" content="Cortes prontos enquanto a live acontece.">
 <meta property="og:image" content="https://inoval-dev.github.io/banner.jpg">
@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "c3aebd9f7e42", u = new URL(location.href);
+  const atual = "ee7938a351fc", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,7 +27,7 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=c3aebd9f7e42">
+<link rel="stylesheet" href="estilo.css?v=ee7938a351fc">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -53,7 +53,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos e entrega Shorts e vídeos longos editados.</p>
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
-      <span class="versao-linha">Versão <b data-versao>1.8.8</b>, para Windows 10 e 11</span>
+      <span class="versao-linha">Versão <b data-versao>1.11.0</b>, para Windows 10 e 11</span>
     </div>
     </div>
 
@@ -69,10 +69,10 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   </section>
 
   <section class="numeros" id="numeros" aria-label="O que vem no programa">
-    <p><b data-n="16">16</b><span>transições</span></p>
-    <p><b data-n="16">16</b><span>efeitos de texto</span></p>
-    <p><b data-n="12">12</b><span>modelos de legenda</span></p>
-    <p><b data-n="86">86</b><span>efeitos sonoros</span></p>
+    <p><b data-n="28">28</b><span>transições</span></p>
+    <p><b data-n="14">14</b><span>efeitos de texto</span></p>
+    <p><b data-n="22">22</b><span>modelos de legenda</span></p>
+    <p><b data-n="108">108</b><span>efeitos sonoros</span></p>
     <p><b data-n="44">44</b><span>fontes</span></p>
   </section>
 
@@ -80,8 +80,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <h2 class="sobe" id="passos-t">Da live ao Short em três passos</h2>
     <ol>
       <li><b>Escolha o vídeo</b><span>Cole o link da live no Kick, Twitch, YouTube ou X, ou envie um arquivo do computador.</span></li>
-      <li><b>O Clipador corta</b><span>Ele avalia a voz, o chat e a ação na tela, e fecha cada corte no fim do assunto.</span></li>
-      <li><b>Você revisa e posta</b><span>Ajuste o que quiser no editor e coloque os Shorts na agenda do YouTube.</span></li>
+      <li><b>O Clipador corta</b><span>Ele avalia a voz, o chat e a ação na tela, começa no começo do assunto e só termina quando a história acaba.</span></li>
+      <li><b>Você revisa e posta</b><span>Cada corte vem com o potencial de viralizar. Poste primeiro os melhores e coloque o resto na agenda do YouTube.</span></li>
     </ol>
   </section>
 
@@ -92,7 +92,15 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
         <img src="ao-vivo.webp" width="1440" height="900" loading="lazy" alt="Painel ao vivo com gráfico de momentos e chat">
       </article>
       <article>
-        <h2>Edite como em um programa profissional</h2><p>Timeline com várias faixas, 16 transições, atalhos de teclado e prévia no seu vídeo antes de aplicar.</p>
+        <h2>Saiba o que postar primeiro</h2><p>Cada corte ganha uma nota de potencial de viralizar, com o motivo: a reação da live, o gancho dos primeiros segundos, se a história está completa e o ritmo. As dicas mostram o que mudar antes de postar.</p>
+        <img src="potencial.webp" width="1440" height="900" loading="lazy" alt="Janela do corte com o potencial de viralizar e a nota de cada parte">
+      </article>
+      <article>
+        <h2>Aprende o que funciona no seu canal</h2><p>O Clipador testa jeitos diferentes de editar, como a câmera dinâmica que mostra o jogo na ação e o rosto do streamer na reação. O que você posta e o que dá mais visualizações passa a aparecer mais.</p>
+        <img src="ideias.webp" width="1440" height="900" loading="lazy" alt="Janela Aprendizado com as ideias de edição em teste e os resultados de cada uma">
+      </article>
+      <article>
+        <h2>Edite como em um programa profissional</h2><p>Timeline com várias faixas, 28 transições, efeitos de voz, legenda que segue quem fala e prévia no seu vídeo antes de aplicar.</p>
         <img src="transicoes.webp" width="1440" height="900" loading="lazy" alt="Editor do Clipador com transições na timeline">
       </article>
       <article>
@@ -107,6 +115,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <div class="palco" aria-hidden="true">
       <div class="monitor" id="monitor">
         <img src="ao-vivo.webp" width="1440" height="900" loading="lazy" alt="">
+        <img src="potencial.webp" width="1440" height="900" loading="lazy" alt="">
+        <img src="ideias.webp" width="1440" height="900" loading="lazy" alt="">
         <img src="transicoes.webp" width="1440" height="900" loading="lazy" alt="">
         <img src="efeitos.webp" width="1440" height="900" loading="lazy" alt="">
         <img src="postagem.webp" width="1440" height="900" loading="lazy" alt="">
@@ -118,9 +128,11 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.4.0 <small>Atual, novembro de 2026</small></h3><p>Corte de vídeos enviados do computador, prévia antes de aplicar, painel de transições, efeitos em textos e legendas, e blocos que se movem arrastando na timeline.</p></li>
-      <li><h3>1.3.0 <small>Novembro de 2026</small></h3><p>Visual renovado, vídeo que toca ao passar o mouse e detecção mais confiável das lives do YouTube.</p></li>
-      <li><h3>1.2.0 <small>Novembro de 2026</small></h3><p>Vídeos longos com abertura forte, novas transições e fontes, cortes que respeitam o assunto e aprendizado com as suas edições.</p></li>
+      <li><h3>1.11.0 <small>Atual, novembro de 2026</small></h3><p>Ideias de edição em teste: o Clipador compara jeitos de editar e usa mais o que você posta e o que dá mais visualizações.</p></li>
+      <li><h3>1.10.0 <small>Novembro de 2026</small></h3><p>Câmera dinâmica, que mostra o jogo na ação e o rosto do streamer de perto na reação, legenda React e o seu @ no vídeo e no final.</p></li>
+      <li><h3>1.9.2 <small>Novembro de 2026</small></h3><p>Potencial de viralizar em cada corte, com o motivo da nota e dicas do que mudar.</p></li>
+      <li><h3>1.9.1 <small>Novembro de 2026</small></h3><p>Cortes com começo, meio e fim, posts de frase para o feed e os stories, e câmera que segue quem está falando.</p></li>
+      <li><h3>1.9.0 <small>Novembro de 2026</small></h3><p>Editor renovado, com miniaturas na timeline, efeitos de voz, filtros, exportação para outros editores e tradução de legendas.</p></li>
     </ol>
   </section>
 
@@ -128,7 +140,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <div>
       <h2 id="baixar-t">Baixe o Clipador</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.8.8</span></a>
+      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.11.0</span></a>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
@@ -144,6 +156,6 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js?v=c3aebd9f7e42"></script>
+<script src="site.js?v=ee7938a351fc"></script>
 </body>
 </html>
