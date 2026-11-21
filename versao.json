@@ -1,14 +1,26 @@
 {
-  "versao": "1.14.0",
+  "versao": "1.15.0",
   "data": "2026-11-21",
   "notas": [
-    "Várias lives de uma vez: cole vários links juntos no campo do Ao vivo, separados por espaço, vírgula ou linha. Cada live é gravada, tem o chat lido e é cortada ao mesmo tempo que as outras.",
-    "Fila de edição inteligente: com várias lives, os momentos de reação mais forte são editados primeiro. O que você pede na hora (refazer, encurtar) passa na frente de tudo.",
-    "Os cortes esperando mostram a posição na fila de edição.",
-    "O Ao vivo mostra quantas lives o seu computador aguenta bem ao mesmo tempo e avisa quando passar disso."
+    "Melhora automática: quando o potencial previsto de um corte fica abaixo de 75%, o Clipador testa outras versões antes de montar o vídeo (outros começos e fins, começar uma frase depois, sem as pausas longas) e fica com a de maior potencial. O limite muda em Ajustes, e dá para desligar.",
+    "O trecho em volta do momento nunca é cortado, porque ali muitas vezes é o jogo que conta a história.",
+    "Cortes prontos ganharam o botão Melhorar o potencial sozinho, na caixa do potencial. Ele refaz o vídeo só se achar uma versão melhor e não mexe em cortes já editados à mão na timeline.",
+    "A caixa do potencial mostra o que foi melhorado, de quanto para quanto. A tela Assistir a edição mostra a melhora acontecendo.",
+    "O potencial agora leva em conta os pedaços cortados na timeline."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.15.0",
+      "data": "2026-11-21",
+      "notas": [
+        "Melhora automática: quando o potencial previsto de um corte fica abaixo de 75%, o Clipador testa outras versões antes de montar o vídeo (outros começos e fins, começar uma frase depois, sem as pausas longas) e fica com a de maior potencial. O limite muda em Ajustes, e dá para desligar.",
+        "O trecho em volta do momento nunca é cortado, porque ali muitas vezes é o jogo que conta a história.",
+        "Cortes prontos ganharam o botão Melhorar o potencial sozinho, na caixa do potencial. Ele refaz o vídeo só se achar uma versão melhor e não mexe em cortes já editados à mão na timeline.",
+        "A caixa do potencial mostra o que foi melhorado, de quanto para quanto. A tela Assistir a edição mostra a melhora acontecendo.",
+        "O potencial agora leva em conta os pedaços cortados na timeline."
+      ]
+    },
     {
       "versao": "1.14.0",
       "data": "2026-11-21",
@@ -277,5 +289,5 @@
       ]
     }
   ],
-  "site": "b21d8a179a86"
+  "site": "f1411a086a17"
 }
