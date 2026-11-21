@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "ee7938a351fc", u = new URL(location.href);
+  const atual = "2038e4574852", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,7 +27,7 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=ee7938a351fc">
+<link rel="stylesheet" href="estilo.css?v=2038e4574852">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -53,7 +53,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos e entrega Shorts e vídeos longos editados.</p>
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
-      <span class="versao-linha">Versão <b data-versao>1.11.0</b>, para Windows 10 e 11</span>
+      <span class="versao-linha">Versão <b data-versao>1.11.1</b>, para Windows 10 e 11</span>
     </div>
     </div>
 
@@ -128,7 +128,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.11.0 <small>Atual, novembro de 2026</small></h3><p>Ideias de edição em teste: o Clipador compara jeitos de editar e usa mais o que você posta e o que dá mais visualizações.</p></li>
+      <li><h3>1.11.1 <small>Atual, novembro de 2026</small></h3><p>20 modelos de legenda do editor no Estilo do vídeo e escolha da fonte da legenda e do título.</p></li>
+      <li><h3>1.11.0 <small>Novembro de 2026</small></h3><p>Ideias de edição em teste: o Clipador compara jeitos de editar e usa mais o que você posta e o que dá mais visualizações.</p></li>
       <li><h3>1.10.0 <small>Novembro de 2026</small></h3><p>Câmera dinâmica, que mostra o jogo na ação e o rosto do streamer de perto na reação, legenda React e o seu @ no vídeo e no final.</p></li>
       <li><h3>1.9.2 <small>Novembro de 2026</small></h3><p>Potencial de viralizar em cada corte, com o motivo da nota e dicas do que mudar.</p></li>
       <li><h3>1.9.1 <small>Novembro de 2026</small></h3><p>Cortes com começo, meio e fim, posts de frase para o feed e os stories, e câmera que segue quem está falando.</p></li>
@@ -140,7 +141,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <div>
       <h2 id="baixar-t">Baixe o Clipador</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.11.0</span></a>
+      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.11.1</span></a>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
@@ -156,6 +157,6 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js?v=ee7938a351fc"></script>
+<script src="site.js?v=2038e4574852"></script>
 </body>
 </html>

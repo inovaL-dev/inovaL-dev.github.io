@@ -1,16 +1,26 @@
 {
-  "versao": "1.11.0",
+  "versao": "1.11.1",
   "data": "2026-11-21",
   "notas": [
-    "Ideias em teste: o estilo React com câmera dinâmica deixa de ser o padrão de todos os cortes e vira uma ideia testada lado a lado com o seu estilo. Cada corte novo recebe uma delas.",
-    "O Clipador aprende qual funciona melhor: o que você posta conta a favor; o que você apaga sem postar ou troca no corte conta contra; com o YouTube conectado, as visualizações contam ainda mais. A melhor aparece mais vezes, e as outras continuam aparecendo de vez em quando para perceber se o gosto mudou.",
-    "Em Aprendizado, a nova parte Ideias em teste mostra quantas vezes cada ideia foi usada, postada, apagada e trocada, e quanto ela vai aparecer nos próximos cortes. Dá para ligar ou desligar cada uma.",
-    "Os vídeos de referência agora ensinam também a câmera dinâmica e a legenda curta na divisão da tela: se o exemplo troca entre a tela dividida, o rosto e o jogo, o modelo aprendido faz o mesmo.",
-    "Na janela do corte, o campo Câmera deste corte deixa escolher entre dinâmica e fixa e refazer o vídeo.",
-    "Quem instalou a 1.10.0 volta a ter a legenda de antes como padrão; a legenda React segue disponível em Estilo do vídeo."
+    "Estilo do vídeo ganhou os 20 modelos de legenda do editor, cada um com a sua fonte e as suas cores: Viral amarelo, Caixa verde, Uma palavra, Desenho, Quadrinho, Gamer, Neon rosa, Cinema, Terror, Faixa preta, Pincel, Arcade, Karaokê pop, Karaokê caixa, Alternado, Frase em bloco, Sublinhado, Volumoso, Retrô 3D e Sem pontuação.",
+    "Escolha a fonte da legenda e a do título entre as 44 fontes do Clipador, com amostra na hora. A troca de fonte mantém o tamanho da letra.",
+    "A barra de progresso no topo dos vídeos sai por padrão. Quem quiser pode ligar de novo em Estilo do vídeo.",
+    "Os novos modelos também valem para escolher a legenda de um corte só e aparecem iguais quando o corte é aberto no editor.",
+    "O script de publicação no GitHub funciona com pastas que estavam em outro ramo e refaz a marca da versão quando o instalador ainda não foi criado."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.11.1",
+      "data": "2026-11-21",
+      "notas": [
+        "Estilo do vídeo ganhou os 20 modelos de legenda do editor, cada um com a sua fonte e as suas cores: Viral amarelo, Caixa verde, Uma palavra, Desenho, Quadrinho, Gamer, Neon rosa, Cinema, Terror, Faixa preta, Pincel, Arcade, Karaokê pop, Karaokê caixa, Alternado, Frase em bloco, Sublinhado, Volumoso, Retrô 3D e Sem pontuação.",
+        "Escolha a fonte da legenda e a do título entre as 44 fontes do Clipador, com amostra na hora. A troca de fonte mantém o tamanho da letra.",
+        "A barra de progresso no topo dos vídeos sai por padrão. Quem quiser pode ligar de novo em Estilo do vídeo.",
+        "Os novos modelos também valem para escolher a legenda de um corte só e aparecem iguais quando o corte é aberto no editor.",
+        "O script de publicação no GitHub funciona com pastas que estavam em outro ramo e refaz a marca da versão quando o instalador ainda não foi criado."
+      ]
+    },
     {
       "versao": "1.11.0",
       "data": "2026-11-21",
@@ -234,5 +244,5 @@
       ]
     }
   ],
-  "site": "ee7938a351fc"
+  "site": "2038e4574852"
 }
