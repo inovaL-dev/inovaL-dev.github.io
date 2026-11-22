@@ -1,18 +1,24 @@
 {
-  "versao": "1.17.2",
+  "versao": "1.17.3",
   "data": "2026-11-22",
   "notas": [
-    "Gancho do começo bem mais exigente: o Short só abre com o auge quando ele se entende sozinho (riso, grito, uma fala forte curta ou uma frase inteira). Pedaço de frase solto não entra mais. Na dúvida, o corte começa direto na história.",
-    "O Clipador aprende com você: quando você tira o gancho de um corte (Abertura deste corte, no corte) ou apaga cortes que abriam com ele, passa a exigir um auge ainda mais claro.",
-    "Os cortes ainda não postados que abriam com o auge são refeitos uma vez com a regra nova.",
-    "Correção: a fila de edição podia ficar parada enquanto a legenda mais precisa baixava. Agora os cortes continuam sendo editados com a legenda equilibrada até o download terminar.",
-    "Botão Cancelar edições em Cortes: para tudo o que está na fila de uma vez. Em Selecionar, dá para apagar também os cortes que ainda estão sendo editados.",
-    "Um problema em um corte não para mais a fila inteira.",
-    "O instalador espera o Clipador fechar de verdade antes de trocar os arquivos.",
-    "Se o Clipador foi aberto como administrador, o instalador explica como fechar em vez de mostrar o erro DeleteFile."
+    "Melhoria automática de verdade: todo corte que fica abaixo do potencial configurado (ou do mínimo para postar, o que for maior) é refeito sozinho, mirando bem acima dele. Você não precisa clicar em nada.",
+    "O Clipador agora guarda o trecho gravado inteiro da live até terminar a melhoria e procura nele outro começo e outro fim, não só dentro do que já tinha entrado no corte. Também tira mais pausas.",
+    "Se a reação foi fraca demais para isso bastar, o momento é juntado com as cenas mais fortes da mesma live em um Short de cenas emendadas.",
+    "Os cortes já prontos e ainda não postados abaixo do valor passam por essa melhoria uma vez. O que não passar do valor fica com a melhor versão e não é postado."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.17.3",
+      "data": "2026-11-22",
+      "notas": [
+        "Melhoria automática de verdade: todo corte que fica abaixo do potencial configurado (ou do mínimo para postar, o que for maior) é refeito sozinho, mirando bem acima dele. Você não precisa clicar em nada.",
+        "O Clipador agora guarda o trecho gravado inteiro da live até terminar a melhoria e procura nele outro começo e outro fim, não só dentro do que já tinha entrado no corte. Também tira mais pausas.",
+        "Se a reação foi fraca demais para isso bastar, o momento é juntado com as cenas mais fortes da mesma live em um Short de cenas emendadas.",
+        "Os cortes já prontos e ainda não postados abaixo do valor passam por essa melhoria uma vez. O que não passar do valor fica com a melhor versão e não é postado."
+      ]
+    },
     {
       "versao": "1.17.2",
       "data": "2026-11-22",
@@ -326,5 +332,5 @@
       ]
     }
   ],
-  "site": "ef98afbca31b"
+  "site": "6a54ce95d944"
 }
