@@ -1,15 +1,22 @@
 {
-  "versao": "1.16.0",
+  "versao": "1.17.0",
   "data": "2026-11-22",
   "notas": [
-    "Gancho de abertura nos Shorts: o vídeo começa com 2 a 3 segundos do auge (o grito, a risada, o susto), com o rosto do streamer de perto e a legenda. Depois a imagem treme, perde a cor e a fita volta, com o som de rebobinar e um clarão, e a história começa do começo.",
-    "O auge é achado pelo pico de som perto do momento e pelas falas fortes da reação. A prévia nunca começa nem termina no meio de uma palavra.",
-    "Quando a história já começa no auge, não há prévia. Também não há quando o Short passaria de 1 minuto.",
-    "Liga e desliga em Estilo do vídeo. Na janela de cada corte dá para escolher entre começar pelo auge e começar do começo da história.",
-    "O potencial de viralizar conta a prévia do auge como gancho forte."
+    "Selecionar vários cortes: em Cortes, o botão Selecionar liga a seleção. Clique nos cortes, marque a página inteira ou selecione todos os cortes do filtro de uma vez.",
+    "Com os cortes selecionados dá para apagar todos de uma vez ou marcar todos como postados. Os cortes que ainda estão sendo editados não são apagados.",
+    "Correção: um corte apagado continuava esperando na agenda de postagem. Agora ele sai da agenda junto."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.17.0",
+      "data": "2026-11-22",
+      "notas": [
+        "Selecionar vários cortes: em Cortes, o botão Selecionar liga a seleção. Clique nos cortes, marque a página inteira ou selecione todos os cortes do filtro de uma vez.",
+        "Com os cortes selecionados dá para apagar todos de uma vez ou marcar todos como postados. Os cortes que ainda estão sendo editados não são apagados.",
+        "Correção: um corte apagado continuava esperando na agenda de postagem. Agora ele sai da agenda junto."
+      ]
+    },
     {
       "versao": "1.16.0",
       "data": "2026-11-22",
@@ -300,5 +307,5 @@
       ]
     }
   ],
-  "site": "376c6325adfc"
+  "site": "fcd0e1c75c0d"
 }
