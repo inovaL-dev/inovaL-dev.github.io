@@ -2,6 +2,9 @@
   "versao": "1.17.1",
   "data": "2026-11-22",
   "notas": [
+    "Gancho do começo bem mais exigente: o Short só abre com o auge quando ele se entende sozinho (riso, grito, uma fala forte curta ou uma frase inteira). Pedaço de frase solto não entra mais. Na dúvida, o corte começa direto na história.",
+    "O Clipador aprende com você: quando você tira o gancho de um corte (Abertura deste corte, no corte) ou apaga cortes que abriam com ele, passa a exigir um auge ainda mais claro.",
+    "Os cortes ainda não postados que abriam com o auge são refeitos uma vez com a regra nova.",
     "Correção: a fila de edição podia ficar parada enquanto a legenda mais precisa baixava. Agora os cortes continuam sendo editados com a legenda equilibrada até o download terminar.",
     "Botão Cancelar edições em Cortes: para tudo o que está na fila de uma vez. Em Selecionar, dá para apagar também os cortes que ainda estão sendo editados.",
     "Um problema em um corte não para mais a fila inteira.",
@@ -14,6 +17,9 @@
       "versao": "1.17.1",
       "data": "2026-11-22",
       "notas": [
+        "Gancho do começo bem mais exigente: o Short só abre com o auge quando ele se entende sozinho (riso, grito, uma fala forte curta ou uma frase inteira). Pedaço de frase solto não entra mais. Na dúvida, o corte começa direto na história.",
+        "O Clipador aprende com você: quando você tira o gancho de um corte (Abertura deste corte, no corte) ou apaga cortes que abriam com ele, passa a exigir um auge ainda mais claro.",
+        "Os cortes ainda não postados que abriam com o auge são refeitos uma vez com a regra nova.",
         "Correção: a fila de edição podia ficar parada enquanto a legenda mais precisa baixava. Agora os cortes continuam sendo editados com a legenda equilibrada até o download terminar.",
         "Botão Cancelar edições em Cortes: para tudo o que está na fila de uma vez. Em Selecionar, dá para apagar também os cortes que ainda estão sendo editados.",
         "Um problema em um corte não para mais a fila inteira.",
@@ -320,5 +326,5 @@
       ]
     }
   ],
-  "site": "611e52a088a3"
+  "site": "69a7146454e1"
 }
