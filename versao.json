@@ -1,15 +1,26 @@
 {
-  "versao": "1.15.0",
-  "data": "2026-11-21",
+  "versao": "1.16.0",
+  "data": "2026-11-22",
   "notas": [
-    "Melhora automática: quando o potencial previsto de um corte fica abaixo de 75%, o Clipador testa outras versões antes de montar o vídeo (outros começos e fins, começar uma frase depois, sem as pausas longas) e fica com a de maior potencial. O limite muda em Ajustes, e dá para desligar.",
-    "O trecho em volta do momento nunca é cortado, porque ali muitas vezes é o jogo que conta a história.",
-    "Cortes prontos ganharam o botão Melhorar o potencial sozinho, na caixa do potencial. Ele refaz o vídeo só se achar uma versão melhor e não mexe em cortes já editados à mão na timeline.",
-    "A caixa do potencial mostra o que foi melhorado, de quanto para quanto. A tela Assistir a edição mostra a melhora acontecendo.",
-    "O potencial agora leva em conta os pedaços cortados na timeline."
+    "Gancho de abertura nos Shorts: o vídeo começa com 2 a 3 segundos do auge (o grito, a risada, o susto), com o rosto do streamer de perto e a legenda. Depois a imagem treme, perde a cor e a fita volta, com o som de rebobinar e um clarão, e a história começa do começo.",
+    "O auge é achado pelo pico de som perto do momento e pelas falas fortes da reação. A prévia nunca começa nem termina no meio de uma palavra.",
+    "Quando a história já começa no auge, não há prévia. Também não há quando o Short passaria de 1 minuto.",
+    "Liga e desliga em Estilo do vídeo. Na janela de cada corte dá para escolher entre começar pelo auge e começar do começo da história.",
+    "O potencial de viralizar conta a prévia do auge como gancho forte."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.16.0",
+      "data": "2026-11-22",
+      "notas": [
+        "Gancho de abertura nos Shorts: o vídeo começa com 2 a 3 segundos do auge (o grito, a risada, o susto), com o rosto do streamer de perto e a legenda. Depois a imagem treme, perde a cor e a fita volta, com o som de rebobinar e um clarão, e a história começa do começo.",
+        "O auge é achado pelo pico de som perto do momento e pelas falas fortes da reação. A prévia nunca começa nem termina no meio de uma palavra.",
+        "Quando a história já começa no auge, não há prévia. Também não há quando o Short passaria de 1 minuto.",
+        "Liga e desliga em Estilo do vídeo. Na janela de cada corte dá para escolher entre começar pelo auge e começar do começo da história.",
+        "O potencial de viralizar conta a prévia do auge como gancho forte."
+      ]
+    },
     {
       "versao": "1.15.0",
       "data": "2026-11-21",
@@ -289,5 +300,5 @@
       ]
     }
   ],
-  "site": "f1411a086a17"
+  "site": "376c6325adfc"
 }

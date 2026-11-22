@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "f1411a086a17", u = new URL(location.href);
+  const atual = "376c6325adfc", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,7 +27,7 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=f1411a086a17">
+<link rel="stylesheet" href="estilo.css?v=376c6325adfc">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -53,7 +53,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos e entrega Shorts e vídeos longos editados.</p>
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
-      <span class="versao-linha">Versão <b data-versao>1.15.0</b>, para Windows 10 e 11</span>
+      <span class="versao-linha">Versão <b data-versao>1.16.0</b>, para Windows 10 e 11</span>
     </div>
     </div>
 
@@ -128,7 +128,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.15.0 <small>Atual, novembro de 2026</small></h3><p>Cortes com potencial baixo são melhorados sozinhos antes de ficarem prontos.</p></li>
+      <li><h3>1.16.0 <small>Atual, novembro de 2026</small></h3><p>Shorts que abrem com o auge do momento e voltam para o começo da história, para prender nos primeiros segundos.</p></li>
+      <li><h3>1.15.0 <small>Novembro de 2026</small></h3><p>Cortes com potencial baixo são melhorados sozinhos antes de ficarem prontos.</p></li>
       <li><h3>1.14.0 <small>Novembro de 2026</small></h3><p>Várias lives ao mesmo tempo com um único colar de links, e os momentos mais fortes editados primeiro.</p></li>
       <li><h3>1.13.0 <small>Novembro de 2026</small></h3><p>Assista o Clipador editando cada corte, passo a passo, e poste só os cortes com mais potencial de viralizar.</p></li>
       <li><h3>1.12.0 <small>Novembro de 2026</small></h3><p>Legendas mais certeiras em português, com o modelo large-v3-turbo, nomes das suas lives e correções que o Clipador aprende.</p></li>
@@ -145,7 +146,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     <div>
       <h2 id="baixar-t">Baixe o Clipador</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.15.0</span></a>
+      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.16.0</span></a>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
@@ -161,6 +162,6 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js?v=f1411a086a17"></script>
+<script src="site.js?v=376c6325adfc"></script>
 </body>
 </html>
