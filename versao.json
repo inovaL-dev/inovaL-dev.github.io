@@ -1,13 +1,20 @@
 {
-  "versao": "1.17.0",
+  "versao": "1.17.1",
   "data": "2026-11-22",
   "notas": [
-    "Selecionar vários cortes: em Cortes, o botão Selecionar liga a seleção. Clique nos cortes, marque a página inteira ou selecione todos os cortes do filtro de uma vez.",
-    "Com os cortes selecionados dá para apagar todos de uma vez ou marcar todos como postados. Os cortes que ainda estão sendo editados não são apagados.",
-    "Correção: um corte apagado continuava esperando na agenda de postagem. Agora ele sai da agenda junto."
+    "O instalador espera o Clipador fechar de verdade antes de trocar os arquivos.",
+    "Se o Clipador foi aberto como administrador, o instalador explica como fechar em vez de mostrar o erro DeleteFile."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.17.1",
+      "data": "2026-11-22",
+      "notas": [
+        "O instalador espera o Clipador fechar de verdade antes de trocar os arquivos.",
+        "Se o Clipador foi aberto como administrador, o instalador explica como fechar em vez de mostrar o erro DeleteFile."
+      ]
+    },
     {
       "versao": "1.17.0",
       "data": "2026-11-22",
@@ -307,5 +314,5 @@
       ]
     }
   ],
-  "site": "fcd0e1c75c0d"
+  "site": "ce063303d886"
 }
