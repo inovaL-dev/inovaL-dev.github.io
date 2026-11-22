@@ -1,16 +1,28 @@
 {
-  "versao": "1.18.0",
+  "versao": "1.19.0",
   "data": "2026-11-22",
   "notas": [
-    "O que você quer nos cortes: nas lives gravadas, marque engraçado, susto, jogada, deu ruim, treta e outros, ou escreva com suas palavras. Os momentos que combinam ganham prioridade.",
-    "Selo da live em todos os cortes: uma faixa colorida com AO VIVO, o nome do streamer ou o seu canal. No topo, na divisão entre câmera e jogo ou no rodapé; o vídeo todo, junto com o título ou nos últimos 3 segundos. Fica em Estilo do vídeo.",
-    "Uso do processador em Ajustes: leve deixa o computador usável e esquenta menos, total faz os cortes mais rápido. A gravação da live nunca fica mais lenta.",
-    "Títulos que criam curiosidade: além do título tirado da fala, o Clipador testa títulos como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
-    "Tecla C na tela Ao vivo para cortar na hora.",
-    "Site novo, com todos os recursos, perguntas frequentes e um jeito de apoiar o projeto."
+    "Visual novo: ícones em todos os botões, filtros e títulos das páginas, avisos com ícone de sucesso ou de problema e transições suaves entre as telas.",
+    "Buscar ações com Ctrl+K: digite o que você quer fazer (acompanhar live, cortar vídeo, agenda, estilo, ajustes) e aperte Enter.",
+    "Atalhos de teclado: Ctrl+1 a 6 troca de tela, Ctrl+vírgula abre os Ajustes e a tecla ? mostra todos os atalhos.",
+    "Tour de boas-vindas em 4 passos na primeira vez que o Clipador abre. Dá para ver de novo pela busca de ações.",
+    "Telas vazias com botões para o próximo passo, como Acompanhar uma live e Cortar um vídeo pronto.",
+    "Ajustes reorganizados em seções, com cartões de escolha, a recomendação para o seu computador e o aviso de mudanças não salvas."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.19.0",
+      "data": "2026-11-22",
+      "notas": [
+        "Visual novo: ícones em todos os botões, filtros e títulos das páginas, avisos com ícone de sucesso ou de problema e transições suaves entre as telas.",
+        "Buscar ações com Ctrl+K: digite o que você quer fazer (acompanhar live, cortar vídeo, agenda, estilo, ajustes) e aperte Enter.",
+        "Atalhos de teclado: Ctrl+1 a 6 troca de tela, Ctrl+vírgula abre os Ajustes e a tecla ? mostra todos os atalhos.",
+        "Tour de boas-vindas em 4 passos na primeira vez que o Clipador abre. Dá para ver de novo pela busca de ações.",
+        "Telas vazias com botões para o próximo passo, como Acompanhar uma live e Cortar um vídeo pronto.",
+        "Ajustes reorganizados em seções, com cartões de escolha, a recomendação para o seu computador e o aviso de mudanças não salvas."
+      ]
+    },
     {
       "versao": "1.18.0",
       "data": "2026-11-22",
@@ -346,5 +358,5 @@
       ]
     }
   ],
-  "site": "42ced008a86b"
+  "site": "41cb4907cb9f"
 }
