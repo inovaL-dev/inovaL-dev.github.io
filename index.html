@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "ce063303d886", u = new URL(location.href);
+  const atual = "611e52a088a3", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,7 +27,7 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=ce063303d886">
+<link rel="stylesheet" href="estilo.css?v=611e52a088a3">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -128,7 +128,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.17.1 <small>Atual, novembro de 2026</small></h3><p>O instalador fecha o Clipador sozinho antes de atualizar e, se não conseguir, explica como fechar em vez de dar erro.</p></li>
+      <li><h3>1.17.1 <small>Atual, novembro de 2026</small></h3><p>A fila de edição não fica mais parada enquanto a legenda baixa, e um botão cancela todas as edições de uma vez. O instalador também fecha o Clipador sozinho antes de atualizar.</p></li>
       <li><h3>1.17.0 <small>Novembro de 2026</small></h3><p>Selecione vários cortes para apagar ou marcar como postados de uma vez.</p></li>
       <li><h3>1.16.0 <small>Novembro de 2026</small></h3><p>Shorts que abrem com o auge do momento e voltam para o começo da história, para prender nos primeiros segundos.</p></li>
       <li><h3>1.15.0 <small>Novembro de 2026</small></h3><p>Cortes com potencial baixo são melhorados sozinhos antes de ficarem prontos.</p></li>
@@ -164,6 +164,6 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js?v=ce063303d886"></script>
+<script src="site.js?v=611e52a088a3"></script>
 </body>
 </html>

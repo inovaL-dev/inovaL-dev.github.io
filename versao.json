@@ -2,6 +2,9 @@
   "versao": "1.17.1",
   "data": "2026-11-22",
   "notas": [
+    "Correção: a fila de edição podia ficar parada enquanto a legenda mais precisa baixava. Agora os cortes continuam sendo editados com a legenda equilibrada até o download terminar.",
+    "Botão Cancelar edições em Cortes: para tudo o que está na fila de uma vez. Em Selecionar, dá para apagar também os cortes que ainda estão sendo editados.",
+    "Um problema em um corte não para mais a fila inteira.",
     "O instalador espera o Clipador fechar de verdade antes de trocar os arquivos.",
     "Se o Clipador foi aberto como administrador, o instalador explica como fechar em vez de mostrar o erro DeleteFile."
   ],
@@ -11,6 +14,9 @@
       "versao": "1.17.1",
       "data": "2026-11-22",
       "notas": [
+        "Correção: a fila de edição podia ficar parada enquanto a legenda mais precisa baixava. Agora os cortes continuam sendo editados com a legenda equilibrada até o download terminar.",
+        "Botão Cancelar edições em Cortes: para tudo o que está na fila de uma vez. Em Selecionar, dá para apagar também os cortes que ainda estão sendo editados.",
+        "Um problema em um corte não para mais a fila inteira.",
         "O instalador espera o Clipador fechar de verdade antes de trocar os arquivos.",
         "Se o Clipador foi aberto como administrador, o instalador explica como fechar em vez de mostrar o erro DeleteFile."
       ]
@@ -314,5 +320,5 @@
       ]
     }
   ],
-  "site": "ce063303d886"
+  "site": "611e52a088a3"
 }
