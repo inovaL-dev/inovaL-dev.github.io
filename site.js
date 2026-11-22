@@ -59,7 +59,7 @@
   let m = {};
   function medir() {
     versoes = $$("#linha-versoes li");
-    m = { alt: innerHeight, max: Math.max(1, document.documentElement.scrollHeight - innerHeight), vitrine: pos(vitrine), passos: pos($("#passos ol")), cap: capitulos.map(pos), capAlt: capitulos[0].offsetHeight, linha: pos(linha), linhaAlt: linha.offsetHeight, versoes: versoes.map(pos), baixar: pos(baixar) };
+    m = { alt: innerHeight, max: Math.max(1, document.documentElement.scrollHeight - innerHeight), vitrine: pos(vitrine), passos: pos($("#como ol")), cap: capitulos.map(pos), capAlt: capitulos[0].offsetHeight, linha: pos(linha), linhaAlt: linha.offsetHeight, versoes: versoes.map(pos), baixar: pos(baixar) };
     trilha.querySelectorAll("u").forEach((u) => u.remove());
     for (const id of ["recursos", "versoes", "baixar"]) { const u = document.createElement("u"); u.style.left = `${lim(pos(document.getElementById(id)) / m.max, 0, .995) * 100}%`; trilha.append(u); }
     pintar();
@@ -86,4 +86,114 @@
   const vistos = new IntersectionObserver((lista) => lista.forEach((e) => { if (!e.isIntersecting) return; vistos.unobserve(e.target); e.target.classList.add("visivel"); if (e.target.dataset.n) contar(e.target); }), { threshold: .35 });
   $$(".sobe, .numeros b").forEach((n) => { if (n.dataset.n) n.textContent = "0"; vistos.observe(n); });
   baixar.addEventListener("pointermove", (ev) => { const r = baixar.getBoundingClientRect(); baixar.style.setProperty("--mx", `${ev.clientX - r.left}px`); baixar.style.setProperty("--my", `${ev.clientY - r.top}px`); }, { passive: true });
+})();
+
+/* ---------- Apoio, estrelas, recursos e detalhes (1.18) ---------- */
+(() => {
+  const $ = (q) => document.querySelector(q), $$ = (q) => [...document.querySelectorAll(q)];
+  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cfg = window.CLIPADOR_APOIO || {};
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch {} }, ler = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+
+  let avisoTempo = 0;
+  function aviso(texto) {
+    const n = $("#copiado"); n.textContent = texto; n.hidden = false; n.style.animation = "none"; void n.offsetWidth; n.style.animation = "";
+    clearTimeout(avisoTempo); avisoTempo = setTimeout(() => { n.hidden = true; }, 2200);
+  }
+  async function copiar(texto, msg) {
+    try { await navigator.clipboard.writeText(texto); }
+    catch { const t = document.createElement("textarea"); t.value = texto; t.style.position = "fixed"; t.style.opacity = "0"; document.body.append(t); t.select(); document.execCommand("copy"); t.remove(); }
+    aviso(msg);
+  }
+  function faiscas(origem) {
+    if (calmo) return;
+    const r = origem.getBoundingClientRect();
+    for (let k = 0; k < 14; k++) {
+      const f = document.createElement("i"), ang = (k / 14) * Math.PI * 2, d = 40 + Math.random() * 50;
+      f.className = "faisca-voa"; f.style.left = `${r.left + r.width / 2}px`; f.style.top = `${r.top + r.height / 2}px`;
+      f.style.setProperty("--x", `${Math.cos(ang) * d}px`); f.style.setProperty("--y", `${Math.sin(ang) * d}px`);
+      f.addEventListener("animationend", () => f.remove()); document.body.append(f);
+    }
+  }
+
+  /* Estrelas no GitHub */
+  const repo = String(cfg.estrela || "").trim();
+  const linkRepo = repo ? `https://github.com/${repo}` : "";
+  for (const a of $$("#estrela-topo, #botao-estrela, #pe-dar")) {
+    if (linkRepo) { a.href = linkRepo; a.addEventListener("click", () => { faiscas(a); guardar("clipador-estrela", "dada"); $("#pedido-estrela").hidden = true; }); }
+    else a.removeAttribute("target");
+  }
+  if (repo) fetch(`https://api.github.com/repos/${repo}`).then((r) => r.ok ? r.json() : null).then((d) => {
+    if (d && typeof d.stargazers_count === "number") $$("[data-estrelas]").forEach((b) => { b.textContent = new Intl.NumberFormat("pt-BR").format(d.stargazers_count); b.hidden = false; });
+  }).catch(() => {});
+
+  /* Pix */
+  const pix = String(cfg.pix || "").trim();
+  const semAcento = (t) => String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9 ]/g, "").toUpperCase().trim();
+  const campo = (id, valor) => `${id}${String(valor.length).padStart(2, "0")}${valor}`;
+  function crc16(texto) {
+    let crc = 0xffff;
+    for (const c of new TextEncoder().encode(texto)) { crc ^= c << 8; for (let i = 0; i < 8; i++) crc = crc & 0x8000 ? ((crc << 1) ^ 0x1021) & 0xffff : (crc << 1) & 0xffff; }
+    return crc.toString(16).toUpperCase().padStart(4, "0");
+  }
+  function pixCopiaECola(chave, nome, cidade) {
+    const corpo = campo("00", "01") + campo("26", campo("00", "br.gov.bcb.pix") + campo("01", chave)) + campo("52", "0000") + campo("53", "986") + campo("58", "BR")
+      + campo("59", semAcento(nome).slice(0, 25)) + campo("60", semAcento(cidade).slice(0, 15)) + campo("62", campo("05", "***")) + "6304";
+    return corpo + crc16(corpo);
+  }
+  if (pix) {
+    $("#apoio-pix").hidden = false; $("#pix-chave").textContent = pix;
+    $("#copiar-pix").addEventListener("click", () => copiar(pix, "Chave Pix copiada. Obrigado pelo apoio!"));
+    if (semAcento(cfg.nome) && semAcento(cfg.cidade)) {
+      const codigo = pixCopiaECola(pix, cfg.nome, cfg.cidade), b = $("#copiar-pix-cola");
+      b.hidden = false; b.addEventListener("click", () => copiar(codigo, "Código Pix copia e cola copiado"));
+    }
+  }
+
+  /* Compartilhar e Instagram */
+  $("#compartilhar").addEventListener("click", async () => {
+    const dados = { title: "Clipador", text: "Cortes prontos enquanto a live acontece.", url: location.origin + location.pathname };
+    if (navigator.share) { try { await navigator.share(dados); return; } catch (e) { if (e.name === "AbortError") return; } }
+    copiar(dados.url, "Link do site copiado");
+  });
+  const insta = String(cfg.instagram || "").replace(/^@/, "").trim();
+  if (insta) { const a = $("#apoio-instagram"); a.href = `https://www.instagram.com/${encodeURIComponent(insta)}/`; a.hidden = false; }
+
+  /* Faixa de novidade */
+  fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
+    const v = d?.historico?.[0]; if (!v?.notas?.length) return;
+    const nota = v.notas[0].split(/(?<=[.:])\s/)[0];
+    $("#anuncio-texto").textContent = `Versão ${v.versao}: ${nota.length > 110 ? nota.slice(0, 107) + "…" : nota}`; $("#anuncio").hidden = false;
+  }).catch(() => {});
+
+  /* Filtro de recursos */
+  const itens = $$("#tudo-grade li");
+  $$(".tudo-filtros button").forEach((b) => b.addEventListener("click", () => {
+    $$(".tudo-filtros button").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+    const g = b.dataset.grupo;
+    itens.forEach((li, n) => { const mostra = g === "todos" || li.dataset.grupo === g; li.classList.toggle("some", !mostra); li.classList.remove("entra");
+      if (mostra && !calmo) { li.style.animationDelay = `${(n % 8) * 35}ms`; void li.offsetWidth; li.classList.add("entra"); } });
+  }));
+  itens.forEach((li) => li.addEventListener("pointermove", (ev) => { const r = li.getBoundingClientRect(); li.style.setProperty("--mx", `${ev.clientX - r.left}px`); li.style.setProperty("--my", `${ev.clientY - r.top}px`); }, { passive: true }));
+
+  /* Bastidores: os passos acendem um por um */
+  const linhas = $$("#bastidor-log li");
+  if (calmo) linhas.forEach((l) => l.classList.add("feito"));
+  else {
+    let passo = 0, rodando = 0;
+    const tocar = () => { linhas.forEach((l, n) => { l.classList.toggle("feito", n < passo); l.classList.toggle("agora", n === passo); }); passo = (passo + 1) % (linhas.length + 3); };
+    new IntersectionObserver((e) => { const v = e[0].isIntersecting; if (v && !rodando) { tocar(); rodando = setInterval(tocar, 950); } else if (!v && rodando) { clearInterval(rodando); rodando = 0; } }, { threshold: .4 }).observe($("#bastidor-log"));
+  }
+
+  /* Pedido de estrela: aparece uma vez, depois que a pessoa já viu boa parte do site */
+  const pedido = $("#pedido-estrela"), dispensado = Number(ler("clipador-estrela-fechou") || 0);
+  if (linkRepo && ler("clipador-estrela") !== "dada" && Date.now() - dispensado > 14 * 864e5) {
+    let mostrado = false; const apoiar = $("#apoiar");
+    addEventListener("scroll", () => {
+      const f = scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight), r = apoiar.getBoundingClientRect(), perto = r.top < innerHeight && r.bottom > 0;
+      if (!mostrado && f > .5 && !perto) { mostrado = true; pedido.hidden = false; }
+      else if (mostrado && perto) pedido.hidden = true;
+    }, { passive: true });
+    $("#pe-fechar").addEventListener("click", () => { pedido.hidden = true; guardar("clipador-estrela-fechou", String(Date.now())); });
+  }
 })();

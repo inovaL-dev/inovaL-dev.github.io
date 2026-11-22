@@ -1,14 +1,28 @@
 {
-  "versao": "1.17.3",
+  "versao": "1.18.0",
   "data": "2026-11-22",
   "notas": [
-    "Melhoria automática de verdade: todo corte que fica abaixo do potencial configurado (ou do mínimo para postar, o que for maior) é refeito sozinho, mirando bem acima dele. Você não precisa clicar em nada.",
-    "O Clipador agora guarda o trecho gravado inteiro da live até terminar a melhoria e procura nele outro começo e outro fim, não só dentro do que já tinha entrado no corte. Também tira mais pausas.",
-    "Se a reação foi fraca demais para isso bastar, o momento é juntado com as cenas mais fortes da mesma live em um Short de cenas emendadas.",
-    "Os cortes já prontos e ainda não postados abaixo do valor passam por essa melhoria uma vez. O que não passar do valor fica com a melhor versão e não é postado."
+    "O que você quer nos cortes: nas lives gravadas, marque engraçado, susto, jogada, deu ruim, treta e outros, ou escreva com suas palavras. Os momentos que combinam ganham prioridade.",
+    "Texto fixo na tela em todos os cortes, como AO VIVO AGORA ou o nome do streamer: em cima, no meio ou embaixo, o vídeo todo ou só os 5 primeiros segundos. Fica em Estilo do vídeo.",
+    "Uso do processador em Ajustes: leve deixa o computador usável e esquenta menos, total faz os cortes mais rápido. A gravação da live nunca fica mais lenta.",
+    "Título-promessa: além do título tirado da fala, o Clipador testa títulos que criam curiosidade, como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
+    "Tecla C na tela Ao vivo para cortar na hora.",
+    "Site novo, com todos os recursos, perguntas frequentes e um jeito de apoiar o projeto."
   ],
   "baixar": "https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe",
   "historico": [
+    {
+      "versao": "1.18.0",
+      "data": "2026-11-22",
+      "notas": [
+        "O que você quer nos cortes: nas lives gravadas, marque engraçado, susto, jogada, deu ruim, treta e outros, ou escreva com suas palavras. Os momentos que combinam ganham prioridade.",
+        "Texto fixo na tela em todos os cortes, como AO VIVO AGORA ou o nome do streamer: em cima, no meio ou embaixo, o vídeo todo ou só os 5 primeiros segundos. Fica em Estilo do vídeo.",
+        "Uso do processador em Ajustes: leve deixa o computador usável e esquenta menos, total faz os cortes mais rápido. A gravação da live nunca fica mais lenta.",
+        "Título-promessa: além do título tirado da fala, o Clipador testa títulos que criam curiosidade, como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
+        "Tecla C na tela Ao vivo para cortar na hora.",
+        "Site novo, com todos os recursos, perguntas frequentes e um jeito de apoiar o projeto."
+      ]
+    },
     {
       "versao": "1.17.3",
       "data": "2026-11-22",
@@ -332,5 +346,5 @@
       ]
     }
   ],
-  "site": "6a54ce95d944"
+  "site": "69555b92b347"
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clipador: cortes prontos enquanto a live acontece</title>
-<meta name="description" content="Programa para Windows que acompanha lives, encontra os melhores momentos, diz quais cortes têm mais potencial de viralizar e entrega Shorts e vídeos longos editados.">
+<meta name="description" content="Programa para Windows que acompanha lives da Kick, Twitch, YouTube e X, encontra os melhores momentos, diz quais cortes têm mais potencial de viralizar e entrega Shorts e vídeos longos editados, com legenda em português.">
 <meta property="og:title" content="Clipador">
 <meta property="og:description" content="Cortes prontos enquanto a live acontece.">
 <meta property="og:image" content="https://inoval-dev.github.io/banner.jpg">
@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "6a54ce95d944", u = new URL(location.href);
+  const atual = "69555b92b347", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,34 +27,74 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=6a54ce95d944">
+<link rel="stylesheet" href="estilo.css?v=69555b92b347">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2L2.9 9.4l6.3-.9z"/></symbol>
+    <symbol id="i-vivo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4M3.5 3.5a12 12 0 0 0 0 17M20.5 3.5a12 12 0 0 1 0 17"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-tesoura" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></symbol>
+    <symbol id="i-legenda" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 14h4M13 14h4M7 10h10"/></symbol>
+    <symbol id="i-grafico" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-cerebro" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3h1V4z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3h-1V4z"/></symbol>
+    <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></symbol>
+    <symbol id="i-ondas" viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2M21 12h0"/></symbol>
+    <symbol id="i-texto" viewBox="0 0 24 24"><path d="M4 6V4h16v2M12 4v16M9 20h6"/></symbol>
+    <symbol id="i-filme" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+    <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-olho" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-coracao" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="m12 3 4 4-4 4-4-4zM12 13l4 4-4 4-4-4zM3 12l4-4 4 4-4 4zM13 12l4-4 4 4-4 4z"/></symbol>
+    <symbol id="i-compartilhar" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></symbol>
+    <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1.4-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.8 2.3 5.8 2.6 5.8 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+  </defs>
+</svg>
+
+<div class="anuncio" id="anuncio" hidden><span class="anuncio-selo">Novo</span><span id="anuncio-texto"></span><a href="#versoes">Ver novidades</a></div>
 
 <header class="topo">
   <a class="marca" href="#inicio" aria-label="Clipador, início">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14l-7 8z"/><rect x="10.75" y="9" width="2.5" height="13" rx="1.25"/></svg>Clipador
   </a>
   <nav aria-label="Seções">
-    <a href="#recursos">Recursos</a>
-    <a href="#versoes">Versões</a>
-    <a class="nav-baixar" href="#baixar">Baixar</a>
+    <a href="#como">Como funciona</a>
+    <a href="#tudo">Recursos</a>
+    <a href="#formatos">Formatos</a>
+    <a href="#requisitos">Requisitos</a>
+    <a href="#perguntas">Perguntas</a>
+    <a href="#apoiar">Apoiar</a>
   </nav>
+  <div class="topo-acoes">
+    <a class="estrela-mini" id="estrela-topo" href="#apoiar" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-estrela"/></svg><span>Estrela</span><b data-estrelas hidden></b></a>
+    <a class="nav-baixar" href="#baixar">Baixar</a>
+  </div>
   <div class="trilha" id="trilha" aria-hidden="true"><i id="trilha-feito"></i><b id="trilha-agulha"></b></div>
 </header>
 
 <main id="inicio">
   <section class="abre">
     <div class="abre-txt" id="abre-txt">
+    <p class="selo-abre"><i></i>Versão <b data-versao>1.18.0</b> · Windows 10 e 11</p>
     <h1 class="legenda" id="legenda" aria-label="Cortes prontos enquanto a live acontece.">
       <span>Cortes</span> <span>prontos</span> <span>enquanto</span> <span>a</span> <span>live</span> <span>acontece.</span>
     </h1>
-    <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos e entrega Shorts e vídeos longos editados.</p>
+    <p class="sub">O Clipador acompanha a transmissão, encontra os melhores momentos, diz quais cortes têm mais chance de viralizar e entrega Shorts e vídeos longos editados, com legenda em português.</p>
     <div class="acoes">
       <a class="botao" href="#baixar">Baixar para Windows</a>
-      <span class="versao-linha">Versão <b data-versao>1.17.3</b>, para Windows 10 e 11</span>
+      <a class="botao fantasma" href="#como">Ver como funciona</a>
     </div>
+    <ul class="fontes-lista" aria-label="De onde o Clipador corta">
+      <li>Kick</li><li>Twitch</li><li>YouTube</li><li>X</li><li>Arquivo do computador</li>
+    </ul>
     </div>
 
     <div class="mesa" aria-hidden="true">
@@ -70,18 +110,45 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
 
   <section class="numeros" id="numeros" aria-label="O que vem no programa">
     <p><b data-n="28">28</b><span>transições</span></p>
-    <p><b data-n="14">14</b><span>efeitos de texto</span></p>
     <p><b data-n="22">22</b><span>modelos de legenda</span></p>
     <p><b data-n="108">108</b><span>efeitos sonoros</span></p>
     <p><b data-n="44">44</b><span>fontes</span></p>
+    <p><b data-n="5">5</b><span>formatos de tela</span></p>
   </section>
 
-  <section class="passos" id="passos" aria-labelledby="passos-t">
-    <h2 class="sobe" id="passos-t">Da live ao Short em três passos</h2>
+  <section class="local" aria-labelledby="local-t">
+    <h2 class="sobe" id="local-t">A edição acontece no seu computador.</h2>
+    <p class="sobe local-sub">Nada de mandar a sua live para um servidor de outra empresa. Os vídeos e os cortes ficam com você.</p>
+    <ul class="local-grade">
+      <li class="sobe"><svg aria-hidden="true"><use href="#i-chip"/></svg><b>Legenda no seu PC</b><span>O reconhecimento de fala roda aqui, sem enviar áudio para fora.</span></li>
+      <li class="sobe"><svg aria-hidden="true"><use href="#i-escudo"/></svg><b>Sem chave de IA paga</b><span>Não precisa de conta em serviço de inteligência artificial.</span></li>
+      <li class="sobe"><svg aria-hidden="true"><use href="#i-pasta"/></svg><b>Cortes na sua pasta</b><span>Tudo fica em Vídeos\Clipador ou na pasta que você escolher.</span></li>
+      <li class="sobe"><svg aria-hidden="true"><use href="#i-vivo"/></svg><b>Internet só para o que precisa</b><span>Gravar a live, ler o chat e, se você quiser, postar no seu YouTube.</span></li>
+    </ul>
+  </section>
+
+  <section class="passos" id="como" aria-labelledby="passos-t">
+    <h2 class="sobe" id="passos-t">Da live ao Short em quatro passos</h2>
     <ol>
-      <li><b>Escolha o vídeo</b><span>Cole o link da live no Kick, Twitch, YouTube ou X, ou envie um arquivo do computador.</span></li>
-      <li><b>O Clipador corta</b><span>Ele avalia a voz, o chat e a ação na tela, começa no começo do assunto e só termina quando a história acaba.</span></li>
-      <li><b>Você revisa e posta</b><span>Cada corte vem com o potencial de viralizar. Poste primeiro os melhores e coloque o resto na agenda do YouTube.</span></li>
+      <li><b>Cole o link</b><span>Live da Kick, Twitch, YouTube ou X. Pode colar vários links de uma vez: cada live é gravada ao mesmo tempo, com o próprio chat.</span></li>
+      <li><b>Ele vigia a live</b><span>Voz do streamer, chat e ação no jogo, comparados com o ritmo da própria live. Quando algo acontece, o corte sai sozinho. Viu antes? Aperte <kbd>C</kbd>.</span></li>
+      <li><b>Ele edita</b><span>Começo, meio e fim, legenda em português, câmera no rosto e no jogo, título, efeitos e a nota de potencial de viralizar.</span></li>
+      <li><b>Você revisa e posta</b><span>Os melhores primeiro. Os que ficaram abaixo do potencial são refeitos sozinhos, e o resto vai para a agenda do YouTube.</span></li>
+    </ol>
+  </section>
+
+  <section class="bastidor" aria-labelledby="bastidor-t">
+    <div class="bastidor-txt">
+      <h2 class="sobe" id="bastidor-t">Veja o Clipador editando.</h2>
+      <p class="sobe">Clique em Assistir a edição e acompanhe cada passo enquanto ele acontece: a fala sendo ouvida, a história sendo escolhida, a câmera trocando de lugar e as legendas entrando.</p>
+    </div>
+    <ol class="bastidor-log" id="bastidor-log" aria-label="Exemplo dos passos de uma edição">
+      <li><i></i>Ouvindo tudo o que foi falado no trecho</li>
+      <li><i></i>A história vai de 0:12 até 0:47: 35 segundos com começo, meio e fim</li>
+      <li><i></i>Título: Ninguém tinha visto isso na live</li>
+      <li><i></i>Câmera dinâmica: jogo na ação, rosto na reação</li>
+      <li><i></i>Gancho de abertura: começa com o auge e volta para a história</li>
+      <li><i></i>Potencial previsto: 88%</li>
     </ol>
   </section>
 
@@ -125,10 +192,69 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     </div>
   </section>
 
+  <section class="formatos" id="formatos" aria-labelledby="formatos-t">
+    <h2 class="sobe" id="formatos-t">Um formato para cada tipo de live</h2>
+    <p class="sobe formatos-sub">O Clipador acha o rosto e o jogo sozinho. Se quiser, troque o formato em qualquer corte.</p>
+    <div class="formatos-grade">
+      <figure class="formato sobe"><div class="tela tela-dividido"><i class="t-rosto"></i><i class="t-jogo"></i><u></u></div><figcaption><b>Câmera em cima, jogo embaixo</b><span>O formato que mais segura quem rola o feed.</span></figcaption></figure>
+      <figure class="formato sobe"><div class="tela tela-pip"><i class="t-jogo"></i><i class="t-rosto"></i><u></u></div><figcaption><b>Jogo com a câmera por cima</b><span>O jogo inteiro e o streamer no canto.</span></figcaption></figure>
+      <figure class="formato sobe"><div class="tela tela-dinamica"><i class="t-jogo"></i><i class="t-rosto"></i><u></u></div><figcaption><b>Câmera dinâmica</b><span>O jogo na ação, o rosto de perto na reação.</span></figcaption></figure>
+      <figure class="formato sobe"><div class="tela tela-rosto"><i class="t-rosto"></i><u></u></div><figcaption><b>Só a câmera</b><span>Para lives de conversa, react e IRL.</span></figcaption></figure>
+      <figure class="formato sobe"><div class="tela tela-inteiro"><i class="t-borrado"></i><i class="t-jogo"></i><u></u></div><figcaption><b>Tela inteira</b><span>O vídeo deitado no meio, com fundo desfocado.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="tudo" id="tudo" aria-labelledby="tudo-t">
+    <h2 class="sobe" id="tudo-t">Tudo o que o Clipador faz</h2>
+    <div class="tudo-filtros" role="tablist" aria-label="Filtrar recursos">
+      <button type="button" role="tab" aria-selected="true" data-grupo="todos">Tudo</button>
+      <button type="button" role="tab" aria-selected="false" data-grupo="live">Ao vivo</button>
+      <button type="button" role="tab" aria-selected="false" data-grupo="edicao">Edição</button>
+      <button type="button" role="tab" aria-selected="false" data-grupo="viral">Potencial</button>
+      <button type="button" role="tab" aria-selected="false" data-grupo="postar">Postagem</button>
+    </div>
+    <ul class="tudo-grade" id="tudo-grade">
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-vivo"/></svg><b>Várias lives ao mesmo tempo</b><span>Cole vários links de uma vez. Cada live é gravada e cortada em paralelo.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-chat"/></svg><b>Lê o chat sem login</b><span>Kick, Twitch e YouTube. Risada, choque, hype e pedido de clipe viram sinal de corte.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-ondas"/></svg><b>Escuta o streamer e o jogo</b><span>Grito, risada e ação na tela, sempre comparados com o normal da própria live.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-raio"/></svg><b>Cortar agora, tecla C</b><span>Viu o lance antes? Um toque e o corte entra na fila.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-escudo"/></svg><b>Sem anúncio da Twitch</b><span>Os intervalos comerciais não entram nos cortes.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-filme"/></svg><b>Lives que já acabaram</b><span>Link do VOD ou arquivo do PC. Ele lê o chat gravado e acha os melhores momentos.</span></li>
+      <li data-grupo="live"><svg aria-hidden="true"><use href="#i-olho"/></svg><b>O que você quer nos cortes</b><span>Marque engraçado, susto, jogada, treta ou escreva com suas palavras.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-tesoura"/></svg><b>Começo, meio e fim</b><span>O corte começa no começo do assunto e só termina quando a história acaba.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-legenda"/></svg><b>Legenda certeira em português</b><span>Palavra por palavra, com os nomes da sua live e as correções que você ensinar.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-camera"/></svg><b>Câmera que segue a ação</b><span>Rosto e jogo encontrados sozinhos, com zoom na reação.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-raio"/></svg><b>Gancho nos primeiros segundos</b><span>Abre com o auge quando ele se entende sozinho, e com um título que dá vontade de ver até o fim.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-texto"/></svg><b>Texto fixo e o seu @</b><span>"AO VIVO AGORA", o nome do streamer, o seu canal. Em cima, no meio ou embaixo.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-filme"/></svg><b>Editor completo</b><span>Timeline com várias faixas, 28 transições, efeitos de voz, filtros e exportação para Premiere e DaVinci.</span></li>
+      <li data-grupo="edicao"><svg aria-hidden="true"><use href="#i-olho"/></svg><b>Assista a edição</b><span>Acompanhe o Clipador montando cada corte, passo a passo.</span></li>
+      <li data-grupo="viral"><svg aria-hidden="true"><use href="#i-grafico"/></svg><b>Potencial de viralizar</b><span>Nota de 0 a 100 com o motivo: reação, gancho, história, ritmo e emoção.</span></li>
+      <li data-grupo="viral"><svg aria-hidden="true"><use href="#i-raio"/></svg><b>Melhora sozinho</b><span>Corte abaixo do potencial é refeito: outro começo, sem pausas ou junto com as cenas mais fortes.</span></li>
+      <li data-grupo="viral"><svg aria-hidden="true"><use href="#i-cerebro"/></svg><b>Aprende com o seu canal</b><span>Testa jeitos de editar e de escrever o título, e usa mais o que você posta e o que dá mais views.</span></li>
+      <li data-grupo="viral"><svg aria-hidden="true"><use href="#i-filme"/></svg><b>Montagens e vídeos longos</b><span>Os melhores momentos em um Short só ou em um vídeo de 5 a 30 minutos.</span></li>
+      <li data-grupo="postar"><svg aria-hidden="true"><use href="#i-agenda"/></svg><b>Agenda do YouTube</b><span>Pastas, horários e a semana inteira programada.</span></li>
+      <li data-grupo="postar"><svg aria-hidden="true"><use href="#i-escudo"/></svg><b>Só posta o que é bom</b><span>Escolha o potencial mínimo para postar, como 85%.</span></li>
+      <li data-grupo="postar"><svg aria-hidden="true"><use href="#i-texto"/></svg><b>Posts de frase</b><span>As melhores falas viram post para o feed e para os stories.</span></li>
+      <li data-grupo="postar"><svg aria-hidden="true"><use href="#i-chip"/></svg><b>Modo leve</b><span>Metade do processador e prioridade baixa: o PC continua usável e esquenta menos.</span></li>
+    </ul>
+  </section>
+
+  <section class="requisitos" id="requisitos" aria-labelledby="req-t">
+    <h2 class="sobe" id="req-t">O que o seu computador precisa</h2>
+    <div class="req-grade">
+      <article class="req sobe"><h3>Modo leve</h3><p class="req-tag">Mínimo</p>
+        <ul><li>8 GB de memória</li><li>Processador de 4 núcleos</li><li>Usa metade do processador</li><li>Esquenta menos e o PC continua usável</li></ul></article>
+      <article class="req req-destaque sobe"><h3>Modo total</h3><p class="req-tag">Recomendado</p>
+        <ul><li>16 GB de memória</li><li>6 núcleos ou mais</li><li>Legenda mais precisa e cortes mais rápidos</li><li>Bom para várias lives ao mesmo tempo</li></ul></article>
+    </div>
+    <p class="sobe req-nota">Windows 10 ou 11, 64 bits. Não precisa de placa de vídeo. O Clipador escolhe o modo sozinho pelo seu computador, e você pode trocar em Ajustes.</p>
+  </section>
+
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.17.3 <small>Atual, novembro de 2026</small></h3><p>Os cortes abaixo do potencial configurado são refeitos sozinhos, procurando em todo o trecho da live e, se preciso, juntando com as cenas mais fortes da mesma live.</p></li>
+      <li><h3>1.18.0 <small>Atual, novembro de 2026</small></h3><p>Escolha o que você quer nos cortes das lives gravadas, texto fixo na tela, modo leve do processador, títulos que criam curiosidade e tecla C para cortar na hora.</p></li>
+      <li><h3>1.17.3 <small>Novembro de 2026</small></h3><p>Os cortes abaixo do potencial configurado são refeitos sozinhos, procurando em todo o trecho da live e, se preciso, juntando com as cenas mais fortes da mesma live.</p></li>
       <li><h3>1.17.2 <small>Novembro de 2026</small></h3><p>O gancho do começo só entra quando o auge se entende sozinho, e aprende com o que você tira. A fila de edição não fica mais parada enquanto a legenda baixa, e um botão cancela todas as edições de uma vez. O instalador também fecha o Clipador sozinho antes de atualizar.</p></li>
       <li><h3>1.17.0 <small>Novembro de 2026</small></h3><p>Selecione vários cortes para apagar ou marcar como postados de uma vez.</p></li>
       <li><h3>1.16.0 <small>Novembro de 2026</small></h3><p>Shorts que abrem com o auge do momento e voltam para o começo da história, para prender nos primeiros segundos.</p></li>
@@ -145,11 +271,65 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
     </ol>
   </section>
 
+  <section class="apoiar" id="apoiar" aria-labelledby="apoiar-t">
+    <div class="apoiar-topo">
+      <span class="coracao" aria-hidden="true"><svg><use href="#i-coracao"/></svg></span>
+      <h2 class="sobe" id="apoiar-t">Apoie o Clipador</h2>
+      <p class="sobe">É um projeto feito no Brasil, por uma pessoa. Qualquer apoio ajuda a continuar melhorando o programa toda semana.</p>
+    </div>
+    <div class="apoiar-grade">
+      <article class="apoio apoio-estrela sobe">
+        <div class="estrela-palco" aria-hidden="true"><svg class="estrela-grande"><use href="#i-estrela"/></svg><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <h3>Dê uma estrela no GitHub</h3>
+        <p>De graça e leva 5 segundos. Ajuda mais gente a encontrar o projeto.</p>
+        <a class="botao" id="botao-estrela" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-estrela"/></svg>Dar uma estrela <b data-estrelas hidden></b></a>
+      </article>
+      <article class="apoio apoio-pix sobe" id="apoio-pix" hidden>
+        <div class="pix-icone" aria-hidden="true"><svg><use href="#i-pix"/></svg></div>
+        <h3>Apoie com Pix</h3>
+        <p>Qualquer valor. Copie a chave ou o código "Pix copia e cola" e cole no app do seu banco.</p>
+        <code class="pix-chave" id="pix-chave"></code>
+        <div class="pix-botoes">
+          <button class="botao" type="button" id="copiar-pix"><svg aria-hidden="true"><use href="#i-copiar"/></svg>Copiar chave Pix</button>
+          <button class="botao fantasma" type="button" id="copiar-pix-cola" hidden>Pix copia e cola</button>
+        </div>
+      </article>
+      <article class="apoio sobe">
+        <div class="pix-icone" aria-hidden="true"><svg><use href="#i-compartilhar"/></svg></div>
+        <h3>Mostre para outro clipador</h3>
+        <p>Conhece alguém que faz cortes de live? Mande o site para essa pessoa.</p>
+        <div class="pix-botoes">
+          <button class="botao" type="button" id="compartilhar">Compartilhar</button>
+          <a class="botao fantasma" id="apoio-instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="perguntas" id="perguntas" aria-labelledby="perguntas-t">
+    <h2 class="sobe" id="perguntas-t">Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Como eu consigo o Clipador?</summary><p>Hoje o download é liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta no navegador, o instalador baixa na hora pelo botão Baixar.</p></details>
+      <details><summary>Serve para qualquer live?</summary><p>Sim. Jogo, react, conversa, IRL e podcast. O Clipador compara cada momento com o ritmo da própria live, então funciona em chats pequenos e gigantes.</p></details>
+      <details><summary>Como ele sabe a hora de cortar?</summary><p>Ele junta três sinais: o chat acelerando e reagindo (risada, choque, hype, pedido de clipe), a voz do streamer e a ação na tela. Quando os sinais passam do normal da live, o corte sai. Você também pode cortar na hora com o botão Cortar agora ou a tecla C.</p></details>
+      <details><summary>O potencial de viralizar é garantia de visualizações?</summary><p>Não. É uma estimativa feita com o que o Clipador sabe do corte: a força da reação, o gancho dos primeiros segundos, se a história está completa, o ritmo e a emoção. Com o YouTube conectado, ele também usa o que já funcionou no seu canal.</p></details>
+      <details><summary>Por que o Windows mostra "O Windows protegeu o computador"?</summary><p>O aviso aparece para programas novos que ainda não têm certificado de assinatura. Clique em Mais informações e depois em Executar assim mesmo. Baixe sempre pelo botão deste site.</p></details>
+      <details><summary>O computador esquenta muito?</summary><p>Editar vídeo usa bastante o processador. Em Ajustes, escolha o modo leve: ele usa metade dos núcleos e prioridade baixa, demora um pouco mais e o computador continua usável. A gravação da live nunca fica mais lenta.</p></details>
+      <details><summary>Onde ficam os cortes?</summary><p>Na pasta Vídeos\Clipador, ou na pasta que você escolher. Tudo fica no seu computador.</p></details>
+      <details><summary>Dá para mudar um corte depois de pronto?</summary><p>Sim. Troque o título, corrija a legenda, mude o formato ou abra no editor completo, com timeline, transições, efeitos e textos.</p></details>
+      <details><summary>Como atualizar?</summary><p>O Clipador avisa quando sai uma versão nova. É só instalar por cima: seus cortes e ajustes continuam lá.</p></details>
+      <details><summary>Posso cortar a live de qualquer pessoa?</summary><p>Corte e publique apenas conteúdo que você tem permissão para usar. Muitos streamers liberam cortes com crédito, e o Clipador já coloca o crédito do canal em cada vídeo.</p></details>
+    </div>
+  </section>
+
   <section class="baixar" id="baixar" data-luz aria-labelledby="baixar-t">
     <div>
-      <h2 id="baixar-t">Baixe o Clipador</h2>
+      <h2 id="baixar-t">Comece a clipar hoje.</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
-      <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.17.3</span></a>
+      <div class="acoes acoes-esquerda">
+        <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.18.0</span></a>
+        <a class="botao fantasma" href="#apoiar">Apoiar o projeto</a>
+      </div>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
     </div>
     <dl>
@@ -161,10 +341,22 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   </section>
 </main>
 
+<aside class="pedido-estrela" id="pedido-estrela" hidden aria-live="polite">
+  <svg class="pe-estrela" aria-hidden="true"><use href="#i-estrela"/></svg>
+  <div><b>Está gostando do Clipador?</b><span>Uma estrela no GitHub ajuda muito.</span></div>
+  <a class="botao" id="pe-dar" href="#" target="_blank" rel="noopener">Dar estrela</a>
+  <button type="button" class="pe-fechar" id="pe-fechar" aria-label="Fechar">×</button>
+</aside>
+
+<p class="copiado" id="copiado" role="status" hidden></p>
+
 <footer class="rodape">
-  <p>Clipador. Corte e publique apenas conteúdo que você tem permissão para usar.</p>
+  <a class="marca" href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14l-7 8z"/><rect x="10.75" y="9" width="2.5" height="13" rx="1.25"/></svg>Clipador</a>
+  <nav aria-label="Links do rodapé"><a href="#como">Como funciona</a><a href="#tudo">Recursos</a><a href="#versoes">Versões</a><a href="#perguntas">Perguntas</a><a href="#apoiar">Apoiar</a></nav>
+  <p>Corte e publique apenas conteúdo que você tem permissão para usar. O potencial de viralizar é uma estimativa e a legenda automática pode errar: confira antes de postar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="site.js?v=6a54ce95d944"></script>
+<script src="apoio.js?v=69555b92b347"></script>
+<script src="site.js?v=69555b92b347"></script>
 </body>
 </html>
