@@ -16,6 +16,6 @@ window.CLIPADOR_APOIO = {
   pix: "701f3ff9-7eac-43d7-b1d6-3304ef727c20",
   nome: "Lucas Pereira Paiva",
   cidade: "",
-  estrela: "https://github.com/inovaL-dev/clipador",
+  estrela: "inovaL-dev/clipador",
   instagram: "",
 };
