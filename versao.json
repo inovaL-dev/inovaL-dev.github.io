@@ -3,9 +3,9 @@
   "data": "2026-11-22",
   "notas": [
     "O que você quer nos cortes: nas lives gravadas, marque engraçado, susto, jogada, deu ruim, treta e outros, ou escreva com suas palavras. Os momentos que combinam ganham prioridade.",
-    "Texto fixo na tela em todos os cortes, como AO VIVO AGORA ou o nome do streamer: em cima, no meio ou embaixo, o vídeo todo ou só os 5 primeiros segundos. Fica em Estilo do vídeo.",
+    "Selo da live em todos os cortes: uma faixa colorida com AO VIVO, o nome do streamer ou o seu canal. No topo, na divisão entre câmera e jogo ou no rodapé; o vídeo todo, junto com o título ou nos últimos 3 segundos. Fica em Estilo do vídeo.",
     "Uso do processador em Ajustes: leve deixa o computador usável e esquenta menos, total faz os cortes mais rápido. A gravação da live nunca fica mais lenta.",
-    "Título-promessa: além do título tirado da fala, o Clipador testa títulos que criam curiosidade, como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
+    "Títulos que criam curiosidade: além do título tirado da fala, o Clipador testa títulos como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
     "Tecla C na tela Ao vivo para cortar na hora.",
     "Site novo, com todos os recursos, perguntas frequentes e um jeito de apoiar o projeto."
   ],
@@ -16,9 +16,9 @@
       "data": "2026-11-22",
       "notas": [
         "O que você quer nos cortes: nas lives gravadas, marque engraçado, susto, jogada, deu ruim, treta e outros, ou escreva com suas palavras. Os momentos que combinam ganham prioridade.",
-        "Texto fixo na tela em todos os cortes, como AO VIVO AGORA ou o nome do streamer: em cima, no meio ou embaixo, o vídeo todo ou só os 5 primeiros segundos. Fica em Estilo do vídeo.",
+        "Selo da live em todos os cortes: uma faixa colorida com AO VIVO, o nome do streamer ou o seu canal. No topo, na divisão entre câmera e jogo ou no rodapé; o vídeo todo, junto com o título ou nos últimos 3 segundos. Fica em Estilo do vídeo.",
         "Uso do processador em Ajustes: leve deixa o computador usável e esquenta menos, total faz os cortes mais rápido. A gravação da live nunca fica mais lenta.",
-        "Título-promessa: além do título tirado da fala, o Clipador testa títulos que criam curiosidade, como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
+        "Títulos que criam curiosidade: além do título tirado da fala, o Clipador testa títulos como Ninguém tinha visto isso na live, e usa mais o jeito que você posta.",
         "Tecla C na tela Ao vivo para cortar na hora.",
         "Site novo, com todos os recursos, perguntas frequentes e um jeito de apoiar o projeto."
       ]
@@ -346,5 +346,5 @@
       ]
     }
   ],
-  "site": "69555b92b347"
+  "site": "42ced008a86b"
 }

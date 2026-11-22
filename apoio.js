@@ -13,8 +13,8 @@
    Depois de editar, rode o publicar-no-github.bat para o site atualizar.
    ===================================================================== */
 window.CLIPADOR_APOIO = {
-  pix: "701f3ff9-7eac-43d7-b1d6-3304ef727c20",
-  nome: "Lucas Pereira Paiva",
+  pix: "",
+  nome: "",
   cidade: "",
   estrela: "inovaL-dev/inovaL-dev.github.io",
   instagram: "",
