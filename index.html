@@ -16,7 +16,7 @@
 <script>
 /* Se saiu uma publicação nova, troca a cópia guardada pelo navegador sem precisar de Ctrl + F5. */
 (() => {
-  const atual = "41cb4907cb9f", u = new URL(location.href);
+  const atual = "b469ab2d4450", u = new URL(location.href);
   if (u.searchParams.get("v") === atual) { u.searchParams.delete("v"); history.replaceState(null, "", u); }
   if (atual === "dev") return;
   fetch(`versao.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((d) => {
@@ -27,7 +27,7 @@
 })();
 if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anim");
 </script>
-<link rel="stylesheet" href="estilo.css?v=41cb4907cb9f">
+<link rel="stylesheet" href="estilo.css?v=b469ab2d4450">
 </head>
 <body>
 <a class="pular" href="#baixar">Ir para o download</a>
@@ -83,7 +83,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
 <main id="inicio">
   <section class="abre">
     <div class="abre-txt" id="abre-txt">
-    <p class="selo-abre"><i></i>Versão <b data-versao>1.19.0</b> · Windows 10 e 11</p>
+    <p class="selo-abre"><i></i>Versão <b data-versao>1.20.0</b> · Windows 10 e 11</p>
     <h1 class="legenda" id="legenda" aria-label="Cortes prontos enquanto a live acontece.">
       <span>Cortes</span> <span>prontos</span> <span>enquanto</span> <span>a</span> <span>live</span> <span>acontece.</span>
     </h1>
@@ -254,7 +254,8 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <section class="versoes" id="versoes" aria-labelledby="versoes-t">
     <h2 class="sobe" id="versoes-t">Versões</h2>
     <ol id="linha-versoes">
-      <li><h3>1.19.0 <small>Atual, novembro de 2026</small></h3><p>Visual novo com ícones, busca de ações com Ctrl+K, atalhos de teclado, tour de boas-vindas e Ajustes reorganizados.</p></li>
+      <li><h3>1.20.0 <small>Atual, novembro de 2026</small></h3><p>Cortes melhores de vídeos já editados, como programas e podcasts com várias câmeras: cada cena ganha o próprio enquadramento, sem tela dividida mostrando parede ou objeto.</p></li>
+      <li><h3>1.19.0 <small>Novembro de 2026</small></h3><p>Visual novo com ícones, busca de ações com Ctrl+K, atalhos de teclado, tour de boas-vindas e Ajustes reorganizados.</p></li>
       <li><h3>1.18.0 <small>Novembro de 2026</small></h3><p>Escolha o que você quer nos cortes das lives gravadas, selo da live na tela, modo leve do processador, títulos que criam curiosidade e tecla C para cortar na hora.</p></li>
       <li><h3>1.17.3 <small>Novembro de 2026</small></h3><p>Os cortes abaixo do potencial configurado são refeitos sozinhos, procurando em todo o trecho da live e, se preciso, juntando com as cenas mais fortes da mesma live.</p></li>
       <li><h3>1.17.2 <small>Novembro de 2026</small></h3><p>O gancho do começo só entra quando o auge se entende sozinho, e aprende com o que você tira. A fila de edição não fica mais parada enquanto a legenda baixa, e um botão cancela todas as edições de uma vez. O instalador também fecha o Clipador sozinho antes de atualizar.</p></li>
@@ -329,7 +330,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
       <h2 id="baixar-t">Comece a clipar hoje.</h2>
       <p>O download está liberado para quem recebeu o convite por e-mail. Com a conta do GitHub convidada aberta neste navegador, o instalador começa a baixar na hora.</p>
       <div class="acoes acoes-esquerda">
-        <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.19.0</span></a>
+        <a class="botao" href="https://github.com/inovaL-dev/clipador/releases/latest/download/Clipador-Instalador.exe">Baixar a versão <span data-versao>1.20.0</span></a>
         <a class="botao fantasma" href="#apoiar">Apoiar o projeto</a>
       </div>
       <p class="nota">Se aparecer "Página não encontrada", sua conta ainda não tem acesso.</p>
@@ -358,7 +359,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentEl
   <p>Corte e publique apenas conteúdo que você tem permissão para usar. O potencial de viralizar é uma estimativa e a legenda automática pode errar: confira antes de postar.</p>
   <p>Kick, Twitch, YouTube e X são marcas de seus respectivos donos. O Clipador não tem ligação com essas empresas.</p>
 </footer>
-<script src="apoio.js?v=41cb4907cb9f"></script>
-<script src="site.js?v=41cb4907cb9f"></script>
+<script src="apoio.js?v=b469ab2d4450"></script>
+<script src="site.js?v=b469ab2d4450"></script>
 </body>
 </html>
